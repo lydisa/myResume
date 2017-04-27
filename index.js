@@ -1,0 +1,73 @@
+
+
+let state = "left";
+let leftMenu = $(".left-menu")
+let leftBrain = $(".left-brain")
+let rightMenu = $(".right-menu")
+$(".left-menu .menu-item").hover(() => {
+    if (state == 'left') {
+        returnState();
+        return;
+    }
+    leftBrain.animate({ "width": "50%" }, 300);
+    leftMenu.removeClass("f_black");
+})
+
+$(".left-menu .menu-item").click(() => {
+    leftBrain.animate({ "width": "100%" }, 300);
+    rightMenu.removeClass("f_black");
+    state = 'left'
+});
+
+
+$(".right-menu .menu-item").hover(() => {
+    if (state == 'right') {
+        returnState();
+        return;
+    }
+    leftBrain.animate({ "width": "50%" }, 300);
+    rightMenu.addClass("f_black");
+})
+
+$(".right-menu .menu-item").click(() => {
+    leftBrain.animate({ "width": "0%" }, 300);
+    leftMenu.addClass("f_black");
+    state = 'right';
+});
+
+$(".branner").mouseout(returnState);
+function returnState() {
+    switch (state) {
+        case "left":
+            leftBrain.animate({ "width": "100%" }, 300);
+            break;
+        case "right":
+            leftBrain.animate({ "width": "0%" }, 300);
+            break;
+    }
+}
+
+$.fn.fixedDiv = function(actCls) {
+    let that = $(this),
+        offsetTop = that.offset().top,
+        scrollTop;
+    let height = that.height();
+    let new_div = $(document.createElement("div"));
+    new_div.css("height",height+"px");
+    new_div.hide();
+    new_div.insertBefore(that);
+    function fix() {
+        scrollTop = $(document).scrollTop();
+        if (scrollTop > offsetTop) {
+            that.addClass(actCls);
+            new_div.show();
+        } else {
+            that.removeClass(actCls);
+            new_div.hide();
+        }
+    }
+    fix();
+    $(window).scroll(fix);
+}
+
+$('.menu-div').fixedDiv('fix-menu');

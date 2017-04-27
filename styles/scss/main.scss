@@ -1,0 +1,129 @@
+$brannerHeight:340px;
+$figureHeight:340px;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    padding: 0
+}
+
+.branner {
+    position: fixed;
+    height: $brannerHeight;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .brain {
+        width: 100%;
+        height: $brannerHeight;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        text-align: center;
+        img {
+            height: $figureHeight;
+            position: relative;
+            top: -45px;
+        }
+    }
+    .left-brain {
+        @extend .brain;
+        background: #465f82 url(../../imgs/figure_left.png) no-repeat fixed 49% -45px/560px auto;
+    }
+    .right-brain {
+        @extend .brain;
+        background: #b9e492 url(../../imgs/figure_right.png) no-repeat fixed 49% -45px/560px auto;
+    }
+}
+
+.bg {
+    background-color: #44444b;
+    margin-top: $brannerHeight;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: -160px;
+}
+
+.menu-div {
+    height: 35px;
+    padding-bottom: 7px;
+}
+
+.menu-base {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.left-menu {
+    @extend .menu-base;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.right-menu {
+    @extend .menu-base;
+    text-align: left;
+    padding-left: 140px;
+}
+
+.menu-item {
+    padding: 2px 15px;
+    margin: 0 5px;
+    display: inline-block;
+    color:white;
+    &:hover {
+        border-bottom: 4px solid #ff9c63
+    }
+    ;
+}
+
+.content {
+    border-radius: 7px;
+    background-color: white;
+    padding: 5px
+}
+
+.panel {
+    margin: 25px 25px 0 25px;
+    background: white;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 20px;
+        font-size: 20px;
+        border-left: 4px solid #ff9c63
+    }
+    .main-div {
+        font-size: 14px;
+        line-height: 29px;
+        border-bottom: 1px solid #DDDDDD;
+        padding: 20px 0;
+        color: #6C6C6C;
+    }
+}
+
+.f_white {
+    color: white;
+}
+
+.f_black {
+    color: black;
+}
+
+.fix-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
