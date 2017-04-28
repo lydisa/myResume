@@ -6,7 +6,8 @@ body {
 }
 
 ul {
-    padding: 0
+    padding: 0;
+    margin:0
 }
 
 .branner {
@@ -23,6 +24,7 @@ ul {
         left: 0;
         z-index: 0;
         text-align: center;
+        overflow: hidden;
         img {
             height: $figureHeight;
             position: relative;
@@ -41,25 +43,23 @@ ul {
 
 .bg {
     background-color: #44444b;
-    margin-top: $brannerHeight;
 }
 
 .main {
     width: 80%;
-    margin: 0 auto;
+    margin: 200px  auto 10px auto;
     position: relative;
-    top: -160px;
 }
 
 .menu-div {
-    height: 35px;
-    padding-bottom: 7px;
+    height: 26px;
 }
 
 .menu-base {
     width: 49%;
     display: inline-block;
     box-sizing: border-box;
+    color:white;
 }
 
 .left-menu {
@@ -78,7 +78,6 @@ ul {
     padding: 2px 15px;
     margin: 0 5px;
     display: inline-block;
-    color:white;
     &:hover {
         border-bottom: 4px solid #ff9c63
     }
@@ -127,3 +126,55 @@ ul {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.footer{
+    width: 50px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.63);
+    position: fixed;
+    top: 242px;
+    right: 2%;
+    padding: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    span{
+
+        img{
+            margin: 10px 0;
+            height: 32px;
+            width: 32px;
+        }
+    }
+}
+.branner_ani_pic{
+position:fixed;
+filter:alpha(opacity=30);
+-moz-opacity:0.30;
+opacity:0.30; 
+}
+
+.gear_1{
+    @extend .branner_ani_pic;
+    top:0;
+    right:0;
+}
+.gear_1{
+    @extend .branner_ani_pic;
+    width:50%;
+    height:50%;
+    top:0;
+    right:0;
+}
+.gear_2{
+    @extend .branner_ani_pic;
+    width:10%;
+    height:10%;
+    top:70px;
+    right:70px;
+}
+.gear_3{
+    @extend .branner_ani_pic;
+    width:35%;
+    height:35%;
+    top:200px;
+    right:200px;
+}

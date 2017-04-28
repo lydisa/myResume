@@ -6,48 +6,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/css/main.css" rel="stylesheet">
-     <link rel="stylesheet" media="screen and (max-width: 600px)" href="styles/css/main-s.css" />
+    <link rel="stylesheet" media="screen and (max-width: 756px)" href="styles/css/main-s.css" />
     <script type="text/javascript" src="libs/jquery.min.js"></script>
 </head>
 
-<body>
+<body class="bg">
     <div class="branner">
-        <div class="right-brain"></div>
+        <div class="right-brain">
+            <span >
+                <img class='gear_1' src="imgs/gear.png">
+            </span>
+            <span >
+                <img class='gear_2' src="imgs/gear.png">
+            </span>
+            <span >
+                <img class='gear_3' src="imgs/gear.png">
+            </span>
+        </div>
         <div class="left-brain"></div>
     </div>
-    <div class="bg">
-        <div class="main">
-            <div class="menu-div">
-                <div class="left-menu f_white">
-                    <ul>
-                        <li class="menu-item">开发日志</li>
-                        <li class="menu-item">Demo</li>
-                    </ul>
-                </div>
-                <div class="right-menu f_black">
-                    <ul>
-                        <li class="menu-item">画廊</li>
-                    </ul>
-                </div>
+    <div class="main">
+        <div class="menu-div">
+            <div class="left-menu">
+                <ul>
+                    <li class="menu-item">开发日志</li>
+                    <li class="menu-item">Demo</li>
+                </ul>
             </div>
-            <div class="content">
-                <div class="panel">
-                    <div class="title"><stong>标题要长标题要长标题要长</stong></div>
-                    <div class="main-div" >hehehehe</div>
+            <div class="right-menu">
+                <ul>
+                    <li class="menu-item">画廊</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="panel">
+                <div class="title">
+                    <stong>标题要长标题要长标题要长</stong>
                 </div>
-                <div class="panel">
-                    <div class="title"><stong>标题要长标题要长标题要长</stong></div>
-                    <div class="main-div">1、两个值前面一个是横向的定位，我们称为x轴方向定位。后面一个值是纵向的定位，我们称为y轴方向定位。如果只有一个值，那默认的就是x轴方向，这时y轴方向就默认的是上下居中对齐，也就是center。
-2、坐标轴的原点就是对应容器的左顶点。
-3、这个坐标的y轴箭头朝下，也就是右下方（容器内部）x y的值才都为正。
-4、x y值分别表示背景图片的左顶点相对于坐标原点（也就是容器的左顶点）的值。
-5、x y的值可以用百分比或者px来表示。
-6、x y也可以用“left、right、top、bottom、center”这五个对齐方式来表示，但注意：用“left、right、top、bottom、center”来表示的时候，应用的是对齐规则，而不是坐标规则。x为left是表示图片的左边和容器的左边对齐，为right的时候表示图片的右边和容器的右边对其，y为top的时候表示图片的顶部和容器的顶部对齐，为bottom时表示图片的底部和容器的底部对齐，x y等于center的时候表示居中对齐。
-7、x y用百分比或者px表示的时候，其值可以为负数。我们应用坐标规则就很容易理解负数表示的意义，x为负数时候表示图片左顶点在容器左顶点的左侧，y为负数时表示图片的左顶点在容器的左定点的上方。也就是向左和向上超出容器的范围。</div>
+                <div class="main-div">hehehehe</div>
+            </div>
+            <div class="panel">
+                <div class="title">
+                    <stong>标题要长标题要长标题要长</stong>
                 </div>
+                <div class="main-div">1、两个值前面一个是横向的定位，我们称为x轴方向定位。后面一个值是纵向的定位，我们称为y轴方向定位。如果只有一个值，那默认的就是x轴方向，这时y轴方向就默认的是上下居中对齐，也就是center。 2、坐标轴的原点就是对应容器的左顶点。
+                    3、这个坐标的y轴箭头朝下，也就是右下方（容器内部）x y的值才都为正。 4、x y值分别表示背景图片的左顶点相对于坐标原点（也就是容器的左顶点）的值。 5、x y的值可以用百分比或者px来表示。 6、x
+                    y也可以用“left、right、top、bottom、center”这五个对齐方式来表示，但注意：用“left、right、top、bottom、center”来表示的时候，应用的是对齐规则，而不是坐标规则。x为left是表示图片的左边和容器的左边对齐，为right的时候表示图片的右边和容器的右边对其，y为top的时候表示图片的顶部和容器的顶部对齐，为bottom时表示图片的底部和容器的底部对齐，x
+                    y等于center的时候表示居中对齐。 7、x y用百分比或者px表示的时候，其值可以为负数。我们应用坐标规则就很容易理解负数表示的意义，x为负数时候表示图片左顶点在容器左顶点的左侧，y为负数时表示图片的左顶点在容器的左定点的上方。也就是向左和向上超出容器的范围。</div>
             </div>
         </div>
     </div>
+    <div class='footer'>
+        <span><img src="imgs/ico_qq.png" alt="qq联系方式"> </span>
+        <span><img src="imgs/ico_weixin.png" alt="微信联系方式"> </span>
+        <span><img src="imgs/ico_weibo.png" alt="微博联系方式">  </span>
+
+    </div>
 </body>
-    <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
 </html>

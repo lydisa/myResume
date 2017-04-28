@@ -5,7 +5,7 @@ let leftMenu = $(".left-menu")
 let leftBrain = $(".left-brain")
 let rightMenu = $(".right-menu")
 $(".left-menu .menu-item").hover(() => {
-    if (state == 'left') {
+    if (state != 'right') {
         returnState();
         return;
     }
@@ -14,6 +14,9 @@ $(".left-menu .menu-item").hover(() => {
 })
 
 $(".left-menu .menu-item").click(() => {
+    if (state == 'none') {
+        return;
+    }
     leftBrain.animate({ "width": "100%" }, 300);
     rightMenu.removeClass("f_black");
     state = 'left'
@@ -21,7 +24,7 @@ $(".left-menu .menu-item").click(() => {
 
 
 $(".right-menu .menu-item").hover(() => {
-    if (state == 'right') {
+    if (state != 'left') {
         returnState();
         return;
     }
@@ -30,6 +33,9 @@ $(".right-menu .menu-item").hover(() => {
 })
 
 $(".right-menu .menu-item").click(() => {
+    if (state == 'none') {
+        return;
+    }
     leftBrain.animate({ "width": "0%" }, 300);
     leftMenu.addClass("f_black");
     state = 'right';
@@ -44,16 +50,18 @@ function returnState() {
         case "right":
             leftBrain.animate({ "width": "0%" }, 300);
             break;
+        case "none":
+            return;
     }
 }
 
-$.fn.fixedDiv = function(actCls) {
+$.fn.fixedDiv = function (actCls) {
     let that = $(this),
         offsetTop = that.offset().top,
         scrollTop;
     let height = that.height();
     let new_div = $(document.createElement("div"));
-    new_div.css("height",height+"px");
+    new_div.css("height", height + "px");
     new_div.hide();
     new_div.insertBefore(that);
     function fix() {
@@ -61,9 +69,11 @@ $.fn.fixedDiv = function(actCls) {
         if (scrollTop > offsetTop) {
             that.addClass(actCls);
             new_div.show();
+            $(".menu-item").css("color","white");
         } else {
             that.removeClass(actCls);
             new_div.hide();
+            $(".menu-item").css("color","");
         }
     }
     fix();
