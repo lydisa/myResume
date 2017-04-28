@@ -7,7 +7,7 @@ body {
 
 ul {
     padding: 0;
-    margin:0
+    margin: 0
 }
 
 .branner {
@@ -25,11 +25,6 @@ ul {
         z-index: 0;
         text-align: center;
         overflow: hidden;
-        img {
-            height: $figureHeight;
-            position: relative;
-            top: -45px;
-        }
     }
     .left-brain {
         @extend .brain;
@@ -47,7 +42,7 @@ ul {
 
 .main {
     width: 80%;
-    margin: 200px  auto 10px auto;
+    margin: 200px auto 10px auto;
     position: relative;
 }
 
@@ -59,7 +54,7 @@ ul {
     width: 49%;
     display: inline-block;
     box-sizing: border-box;
-    color:white;
+    color: white;
 }
 
 .left-menu {
@@ -126,7 +121,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.footer{
+.footer {
     width: 50px;
     border-radius: 4px;
     background: rgba(0, 0, 0, 0.63);
@@ -136,45 +131,95 @@ ul {
     padding: 0px;
     text-align: center;
     box-sizing: border-box;
-    span{
-
-        img{
+    span {
+        img {
             margin: 10px 0;
             height: 32px;
             width: 32px;
         }
     }
 }
-.branner_ani_pic{
-position:fixed;
-filter:alpha(opacity=30);
--moz-opacity:0.30;
-opacity:0.30; 
+
+.branner_ani_pic {
+    position: fixed;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.30;
+    opacity: 0.30;
+    -webkit-animation: change 6s linear infinite;
 }
 
-.gear_1{
+.gear_1 {
     @extend .branner_ani_pic;
-    top:0;
-    right:0;
+    top: 80px;
+    right: 0;
+    -webkit-animation: change-rev 6s linear infinite;
 }
-.gear_1{
+
+.gear_2 {
     @extend .branner_ani_pic;
-    width:50%;
-    height:50%;
-    top:0;
-    right:0;
+    top: 20px;
+    right: 130px;
 }
-.gear_2{
+
+.gear_3 {
     @extend .branner_ani_pic;
-    width:10%;
-    height:10%;
-    top:70px;
-    right:70px;
+    top: 70px;
+    right: 175px;
 }
-.gear_3{
+.roll_1 {
     @extend .branner_ani_pic;
-    width:35%;
-    height:35%;
-    top:200px;
-    right:200px;
+    top: 80px;
+    left: 0;
+    -webkit-animation: change-rev 6s linear infinite;
+}
+
+.roll_2 {
+    @extend .branner_ani_pic;
+    top: 20px;
+    left: 130px;
+}
+
+.roll_3 {
+    @extend .branner_ani_pic;
+    top: 70px;
+    left: 175px;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@include keyframes(change) {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@include keyframes(change-rev) {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
