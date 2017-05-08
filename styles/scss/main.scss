@@ -89,7 +89,6 @@ ul {
     margin: 25px 25px 0 25px;
     background: white;
     .title {
-        height: 40px;
         line-height: 40px;
         padding-left: 20px;
         font-size: 20px;
@@ -132,6 +131,7 @@ ul {
     text-align: center;
     box-sizing: border-box;
     span {
+        cursor: pointer;
         img {
             margin: 10px 0;
             height: 32px;
@@ -145,7 +145,7 @@ ul {
     filter: alpha(opacity=30);
     -moz-opacity: 0.30;
     opacity: 0.30;
-    -webkit-animation: change 6s linear infinite;
+    animation: change 6s linear infinite;
 }
 
 .gear_1 {
@@ -170,7 +170,7 @@ ul {
     @extend .branner_ani_pic;
     top: 80px;
     left: 0;
-    -webkit-animation: change-rev 6s linear infinite;
+    animation: change-rev 6s linear infinite;
 }
 
 .roll_2 {
@@ -183,6 +183,18 @@ ul {
     @extend .branner_ani_pic;
     top: 70px;
     left: 175px;
+}
+.weixin{
+    position: absolute;
+    top: -80px;
+    left: -120px;
+}
+
+.scale{
+    animation: scale 0.3s linear 1 alternate;
+}
+.scale-rev{
+    animation: scale-rev 0.3s linear 1 alternate;
 }
 
 @mixin keyframes($animationName) {
@@ -221,5 +233,27 @@ ul {
     }
     100% {
         transform: rotate(-360deg);
+    }
+}
+
+
+@include keyframes(scale) {
+    0% {
+        transform: scale(0,0);
+        transform-origin:right bottom
+    }
+    100% {
+        transform: scale(1,1);
+
+    }
+}
+@include keyframes(scale-rev) {
+    100% {
+        transform: scale(0,0);
+        transform-origin:right bottom
+    }
+    0% {
+        transform: scale(1,1);
+
     }
 }

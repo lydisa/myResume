@@ -1,13 +1,41 @@
 .main {
     width: 100%;
-    margin-top: 100px;;
+    margin-top: 120px;
 }
 .content{
     border-radius: 0;
 }
+
 .left-menu{
     padding-right:0;
 }
 .right-menu{
     padding-left:0;
+    width: 48%;
+}
+.gear_1 {
+    display: none
+}
+
+.gear_2 {
+    top: 30px;
+    right: 2px;
+}
+
+.gear_3 {
+    top: 70px;
+    right: 15px;
+}
+.roll_1 {
+    display: none
+}
+
+.roll_2 {
+    top: 30px;
+    left: 2px;
+}
+
+.roll_3 {
+    top: 70px;
+    left: 15px;
 }

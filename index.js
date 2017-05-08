@@ -69,11 +69,11 @@ $.fn.fixedDiv = function (actCls) {
         if (scrollTop > offsetTop) {
             that.addClass(actCls);
             new_div.show();
-            $(".menu-item").css("color","white");
+            $(".menu-item").css("color", "white");
         } else {
             that.removeClass(actCls);
             new_div.hide();
-            $(".menu-item").css("color","");
+            $(".menu-item").css("color", "");
         }
     }
     fix();
@@ -81,3 +81,25 @@ $.fn.fixedDiv = function (actCls) {
 }
 
 $('.menu-div').fixedDiv('fix-menu');
+
+let weixin = document.getElementById("weixin");
+let erweima = document.getElementById("erweima");
+let weixinShow = false;
+weixin.addEventListener("click", (e) => {
+    if (!weixinShow) {
+        erweima.style.display = ""
+        erweima.removeClass("scale-rev")
+        erweima.addClass("scale");
+        weixinShow = true;
+    } else {
+        erweima.removeClass("scale")
+        erweima.addClass("scale-rev");
+        weixinShow=false;
+        erweima.addEventListener('webkitAnimationEnd', function () {
+            if (!weixinShow) {
+                erweima.style.display = "none"
+            }
+
+        }, false);
+    }
+})
