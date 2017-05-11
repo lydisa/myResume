@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        div {
+            position:relative;
+            margin: 50px auto 200px;
+            width: 200px;
+            height: 200px;
+            background-image: url('http://images2015.cnblogs.com/blog/608782/201609/608782-20160926101029078-1479229145.jpg');
+        }
+        
+     
+        div:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            background-image: inherit;
+            transform: rotateX(180deg);
+        }
+        
+        div:after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            bottom: -200px;
+            bottom: -100%;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0)100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="below"></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    .container{
+    position:relative;
+    background:#ddd;
+}
+.container > div{
+    width:200px;
+    height:200px;
+    opacity:0.9; // 注意这里，增加一个 opacity
+}
+.float{
+    float:left;
+    background-color:deeppink;
+}
+.inline-block{
+    display:inline-block;
+    background-color:yellowgreen;
+    margin-left:-100px;
+}
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container container2">
+    <div class="inline-block">#divA inline-block</div>
+    <div class="float"> #divB float:left</div>
+</div>
+
+<div class="container container2">
+    <div class="float"> #divB float:left</div>
+    <div class="inline-block">#divA inline-block</div>
+</div>
+</body>
+</html>

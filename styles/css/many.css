@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ccd3d7;
+}
+
+.border1::after {
+    content: "";
+    width: 5px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: deeppink;
+}
+
+.border2 {
+    box-shadow: -5px 0px 0 0 deeppink;
+}
+
+.stackone {
+    border: 6px solid #fff;
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+    position: relative;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.stackone::before {
+    content: "";
+    height: 200px;
+    width: 200px;
+    background: #eff4de;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: -10px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+
+.stackone::after {
+    content: "";
+    height: 200px;
+    width: 200px;
+    background: #768590;
+    border: 6px solid #fff;
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 0px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    transform: rotate(4deg);
+}
+
+.bgColor {
+    background-color: #ff7300;
+    background-clip: border-box;
+}
+
+.bgImg {
+    background-color: #ff7300;
+    background-image: url('http://www.qq1234.org/uploads/allimg/150602/8_150602171754_2.jpg');
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+.contentBox {
+    background-clip: content-box;
+}
+
+.paddingBox {
+    background-clip: padding-box;
+}
+
+.div1{
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+    background:#9c27b0;
+    border:20px dashed #2196f3;
+    position: relative
+}
+.div1::after{
+    border-radius: 50%;
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:#fff;
+}
