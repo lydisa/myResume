@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="../../../libs/jquery.min.js"></script>
+    <script type="text/javascript" src="menu_slide.js"></script>
+    <style>
+    li{
+        list-style:none;
+    }
+    a{
+        text-decoration: initial;
+        color:#4b4f4a;
+    }
+        .m_new_index {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #fff;
+            font-family: 'Microsoft Yahei';
+        }
+        
+        .m_new_index h4 {
+            width: 73%;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: normal;
+            color: #6c6c6c;
+        }
+        
+        .m_new_index ul {
+            width: 76%;
+            margin: 10px auto 0 auto;
+        }
+        
+        .m_new_index ul li {
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 7px 0;
+        }
+        
+        .m_new_index ul li div {
+            width: 106px;
+            height: 106px;
+            margin: 40px 0 auto;
+            border: 1px solid #c8c8c8;
+            border-radius: 50%;
+            background: #fff url("../../../imgs/icon_000.png") center 28px no-repeat;
+            cursor: pointer;
+        }
+        
+        .m_new_index ul li div:hover {
+            box-shadow: 3px 3px 6px #ddd;
+        }
+        
+        .m_new_index ul li div span {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            height: 106px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+              
+        .m_new_index ul li .img1 {
+            background: #fbfbfb url("../../../imgs/icon_001.png") center 28px no-repeat;
+        }
+        
+        .m_new_index ul li div span h4 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #4b4f4a;
+            width: 100%;
+            height: 80px;
+            margin: 64px auto 0 auto;
+            border-collapse: separate;
+        }
+        
+        .m_new_index ul li div span h4 a {
+            display: inline-block;
+            color: #4b4f4a;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .m_new_index ul li div span h4 a p {
+            vertical-align: top;
+            height: 30%;
+            width: 84%;
+            padding: 40px 8% 0 8%;
+            line-height: 20px;
+            text-align: center;
+        }
+        
+        .m_new_index ul li div span em {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            background: url("../../../imgs/ico_close.jpg") no-repeat center center;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .m_new_index ul li div:hover span em {
+            display: block;
+        }
+        /* my_menu_btn */
+        
+        .my_menu_btn {
+            text-align: center;
+            margin-top:60px;
+        }
+        
+        .my_menu_btn a {
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 32px;
+            border-top: 5px solid #dbdbdb;
+            margin: 20px 8px 0 0;
+        }
+        
+        .my_menu_btn a.on {
+            border-color: #5ebc1e;
+        }
+        
+        .m_new_index .side_btn {
+            position: absolute;
+            top: 175px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border: 1px solid #fff;
+            display: block
+        }
+        
+        .m_new_index .side_btn img {
+            margin-top: 15px;
+        }
+        
+        .m_new_index .side_btn:hover {
+            background: #fbfbfb;
+            border: 1px solid rgb(200, 200, 200);
+        }
+        
+        .m_new_index .side_left {
+            left: 5%
+        }
+        
+        .m_new_index .side_right {
+            right: 5%
+        }
+        
+        .m_new_index .box {
+            overflow-x: hidden;
+            white-space: nowrap;
+        }
+        
+        .m_new_index .box span {
+            display: inline-block;
+            width: 100%
+        }
+        
+        .m_foot {
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="m_new_index" style="background: #F7F7F7;">
+        <div class="box">
+            <a class='side_btn side_left' href="javascript:;"><img src="../../../imgs/arrow_left_large.png"></a>
+            <span>
+             <ul id="portals_first_menu_ul"></ul>
+          </span>
+            <span>
+             <ul id="portals_second_menu_ul"></ul>
+          </span>
+            <a class='side_btn side_right' href="javascript:;"><img src="../../../imgs/arrow_right_large.png"></a>
+            <div class="my_menu_btn">
+                <a href="javascript:;" class="on" id="portals_first_menu_btn">我的常用1</a>
+                <a href="javascript:;" id="portals_second_menu_btn">我的常用2</a>
+                <a href="javascript:;" class="on" style="position: absolute;left:0;display:none">&nbsp;</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

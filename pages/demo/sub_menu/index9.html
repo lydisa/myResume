@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <script type="text/javascript" src="../../../libs/jquery.min.js"></script>
+    <title>销售服务门户</title>
+</head>
+<style type="text/css">
+    .icon_right {
+        position: relative;
+        top: 6px;
+        float: right;
+        left: 20px;
+    }
+
+    .second2 .icon_right {
+        left: 0;
+    }
+
+    .second2 {
+        max-height: 300px
+    }
+
+    .side_nav .tabs_con {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        width: 604px;
+    }
+
+    .tabControl .u_fun {
+        width: 200px;
+    }
+
+    .menu_icon span em {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+
+    .menu_icon .menu_off em {
+        background: url("../../../skin/default/images/bizprov/index/icon_off.png") no-repeat;
+    }
+
+    .menu_icon .menu_on em {
+        background: url("../../../skin/default/images/bizprov/index/icon_on.png") no-repeat;
+    }
+
+    /*首页改版-侧边导航栏*/
+.side_nav{position: absolute;color: #fff;width: 200px;background: #1B1B1B;top: 0;bottom: 0;left:0;z-index: 1000;}
+.side_nav a{display: inline-block;color: inherit;}
+.side_nav .tabs_con{width: 750px;position: absolute;left: 200px;z-index: 1000;overflow: hidden;}
+.side_nav .search_blk{margin: 20px 0 10px 0;}
+.side_nav .search_blk input{background: #3b7d22; color:#9dbe91;height: 30px;border: none;padding-left: 10px;width: 120px;border-radius: 3px;}
+.side_nav .search_blk span{background: #f0f7e7;height: 28px;display: inline-block;width: 35px;cursor: pointer;}
+.side_nav .search_blk i{position: relative;top: 5px;}
+.side_nav li{padding: 8px 34px;}
+.side_nav li .icon{position: absolute;left: 25px;top: 13px;}
+.side_nav .nav_tab{color: #131313;z-index: 999;background: #f5f5f5;border: 2px solid #477713;overflow-y: auto;overflow-x: hidden;display: none;}
+.side_nav .nav_tab li{padding: 10px 20px;}
+.side_nav .first>li {position: relative;}
+.side_nav .second {width: 200px;}
+.side_nav .third {max-width: 500px;min-width: 200px;z-index: 10000;position: absolute;left: 202px;top: 0;}
+.side_nav .third li{background: #f5f5f5;color: #477713;width: auto;}
+
+.side_nav .fourth {margin: 20px 0;}
+.side_nav .fourth p{color: #477713;height: 25px;}
+.side_nav .fourth li{display: inline;padding: 0;color: #000000;padding: 2px 10px;position: relative;}
+.side_nav .fourth li a{}
+.side_nav .fourth li .bd_right{border-right: 1px solid #ccc;height: 10px;position: absolute;right: 0;top: 7px;}
+
+.side_nav li.cur{background: #477713;color: #fff;}
+.side_nav .second2 {width: 520px; padding:20px 40px; background-color: #fff;}
+.side_nav .second2 li { display: inline-block; padding: 5px;}
+.side_nav .second2 .litit { display:block; font-weight: bold;}
+.side_nav .second2 li i{ display: inline-block; height: 13px; vertical-align: middle; border-right: 1px solid #D6D6D6; margin:0 0 0 10px;}
+
+ li{
+        list-style:none;
+    }
+    a{
+        text-decoration: initial;
+        color:#4b4f4a;
+    }
+    ul{
+        padding:0
+    }
+    html,body {
+        scrollbar-face-color:#a9c58a; /*滚动条3D表面（ThreedFace）的颜色*/
+        scrollbar-highlight-color:#4b942c; /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+        scrollbar-shadow-color:#4b942c; /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+        scrollbar-3dlight-color:#4b942c; /*滚动条亮边框颜色*/
+        scrollbar-arrow-color:#a9c58a; /*滚动条方向箭头的颜色 */
+        scrollbar-track-color:#4b942c; /*滚动条的拖动区域(TrackBar)颜色*/
+        scrollbar-darkshadow-color:#4b942c; /*滚动条暗边框（ThreedDarkShadow）颜色*/ }
+    /*---滚动条默认显示样式--*/
+    ::-webkit-scrollbar-thumb{
+        background-color:#fff;
+        height:50px;
+        outline-offset:-2px;
+        outline:2px solid #4b942c;
+        -webkit-border-radius:4px;
+        border: 2px solid #CBCBCB;
+    }
+    /*---鼠标点击滚动条显示样式--*/
+    ::-webkit-scrollbar-thumb:hover{
+        background-color:#E9E9E9;
+        height:50px;
+        -webkit-border-radius:6px;
+    }
+    /*---滚动条大小--*/
+    ::-webkit-scrollbar{
+        width:10px;
+        height:8px;
+    }
+    /*---滚动框背景样式--*/
+    ::-webkit-scrollbar-track-piece{
+        background-color:#000;
+        -webkit-border-radius:0;
+    }
+</style>
+
+<body class=" overflow_xh">
+
+<!-- 二级菜单-->
+<div class="side_nav" id="sub_menu">
+    <div class="tabs_con">
+        <ul class="nav_tab second2">
+        </ul>
+    </div>
+</div>
+<!--一级菜单-->
+<div class="side_nav" style="overflow:auto ;">
+    <ul class="first"></ul>
+</div>
+<!-- *** 开始 *** -->
+
+<!-- *** JS *** -->
+<script type="text/javascript">
+    $(function () {
+        var menu = [
+            {
+                name: '订单管理',
+                icon: 'icon-1_2',
+                href: '',
+                sub: [
+                    {name: '订单管理', href: null, isTitle: true},
+                    {name: '销售服务门户', href: ''},
+                    {name: '营销快查', href: ''},
+                    {name: '销售建议批量导入', href: ''},
+                    {name: '统一销售门户', href: ''},
+                    {name: '移动预付费套卡销售', href: ''},
+                    {name: '移动电话换机', href: ''},
+                    {name: '终端与卡销售', href: ''},
+                    {name: '充值业务办理', href: ''},
+                    {name: '批量业务受理', href: ''},
+                    {name: '违约金退费办理', href: ''},
+                    {name: '手工收费打单', href: ''},
+                    {name: '订单跟踪管理', href: ''},
+                    {name: '银行帐号有效性验证', href: ''},
+                    {name: '客户资料后端维护界面', href: ''},
+                    {name: '综合辅助查询', href: ''},
+                    {name: '付费易业务办理', href: ''},
+                    {name: '手工退费打单', href: ''},
+                    {name: 'VC平台业务办理', href: ''},
+                    {name: '拆机挽留管理', href: ''},
+                    {name: '回访、拆机挽留环节处理', href: ''},
+                    {name: '代金券业务', href: ''},
+                    {name: '接口监控', href: ''},
+                    {name: '应急停复单批里导入', href: ''},
+                    {name: '声讯包月查询退订', href: ''},
+                    {name: '黑莓业务数据比对', href: ''},
+                    {name: '远程写卡业务办理', href: ''},
+                    {name: '公话IP承办证打印', href: ''},
+                    {name: '集团4G业务受理门户', href: ''},
+                    {name: '“乐享3G”专区', href: ''},
+                    {name: '星级客户紧急复机', href: ''},
+                    {name: '龙计划功能项', href: ''},
+                    {name: '省级合约功能项', href: ''},
+                    {name: '代理商充值缴费', href: ''},
+                    {name: '未实名移动套卡实名登记', href: ''},
+                    {name: '门户业务办理', href: ''},
+                    {name: '未实名移动套卡异地实名', href: ''},
+                    {name: '销售门户订单管理日志查询', href: ''},
+                    {name: '政企客户改账务', href: ''},
+                    {name: '预约活动', href: ''},
+                    {name: '回执管理', href: ''},
+                    {name: 'CRM门户APP管理平台', href: ''},
+                    {name: '电子回执查询', href: ''},
+                    {name: '订单管理－订单跟踪管理', href: null, isTitle: true},
+                    {name: '异常订单', href: ''},
+                    {name: '待装订单查询', href: ''},
+                    {name: '02O终端预约查询、退订', href: ''},
+                    {name: '订单管理器', href: ''},
+                    {name: '停复机异常监控', href: ''},
+                    {name: '订单竣工监控', href: ''},
+                    {name: '全省国际单点业务管理', href: ''},
+                    {name: '客户需求确认', href: ''},
+                    {name: '集团接口订单监控', href: ''},
+                    {name: '订单审核优质号码', href: ''},
+                    {name: '集团异步订单请求队列监控', href: ''},
+                    {name: '集团异步订单生成省内订单的监控', href: ''}
+                ]
+            }, {
+                name: '一次性费用处理',
+                icon: 'icon-2_2',
+                href: '',
+                sub: [
+                    {name: '一次性费用处理', href: null, isTitle: true},
+                    {name: '收费办理', href: ''},
+                    {name: '补费办理', href: ''},
+                    {name: '费用特殊处理', href: ''},
+                    {name: '退费管理', href: ''},
+                    {name: '费用查询', href: ''},
+                    {name: '发票收据管理', href: ''},
+                    {name: 'ocs调账', href: ''},
+                    {name: '视同销售业务查询', href: ''},
+                    {name: '增值税发票数据查询', href: ''},
+                    {name: '银行扣费对帐信息查询', href: ''},
+                    {name: '补销帐处理', href: ''}
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '业务报表',
+                icon: 'icon-10_2',
+                href: '',
+                sub: [
+                    {name: '业务报表', href: null, isTitle: true},
+                    {name: '报表文件配置', href: ''},
+                    {name: '报表权限配置', href: ''},
+                    {name: '报表展现', href: ''},
+                    {name: '营业受理日报', href: ''},
+                    {name: '报表统计日志查询', href: ''},
+                    {name: '营业厅日清日结报表', href: ''},
+                    {name: '营业员日清日结报表', href: ''},
+                ]
+            }, {
+                name: '收入回现管理',
+                icon: 'icon-11_2',
+                href: ''
+            }, {
+                name: '佣金结算管理',
+                icon: 'icon-12_2',
+                href: ''
+            }, {
+                name: '合作伙伴管理',
+                icon: 'icon-12_2',
+                href: ''
+            }, {
+                name: '合作伙伴管理(新)',
+                icon: 'icon-12_2',
+                href: ''
+            }, {
+                name: '合作伙伴管理(新)',
+                icon: 'icon-12_2',
+                href: ''
+            }, {
+                name: '合作伙伴管理(新)',
+                icon: 'icon-12_2',
+                href: ''
+            }, {
+                name: '合作伙伴管理(新)',
+                icon: 'icon-12_2',
+                href: ''
+            }
+        ];
+        //插入第一级菜单
+        var first = $('.side_nav .first');
+        for (var i = 0; i < menu.length; i++) {
+            first.append("<li> <i class='icon " + menu[i].icon + "'></i> <a href=''>" + menu[i].name + "</a><i class='icon_right'><img src='../../../imgs/icon_right.png' alt='' /></i>")
+        }
+        //第一级展开
+        $('.side_nav .first>li,#sub_menu').hover(function (e) {
+            if($(this).attr("id")=='sub_menu')
+            {
+                $('#sub_menu').find('.second2').show();
+                return;
+            }
+            var index = $(this).index() + 1;
+            $(this).css({
+                background: '#fff',
+                color: '#1B1B1B'
+            });
+            var subMenu = $('#sub_menu');
+            subMenu.find('i.icon').addClass('icon-' + index);
+            //有二级菜单时显示二级菜单
+            if (menu[index - 1].sub) {
+                var subMenus = menu[index - 1].sub;
+                var second = $('.second2');
+                //清空并生成二级菜单
+                second.empty();
+                for (var i = 0; i < subMenus.length; i++) {
+                    if (subMenus[i].isTitle) {
+                        second.append("<li class='litit' " + (subMenus[i].href ? "href='" + subMenus[i].href + "'" : "") + ">" + subMenus[i].name + "</li>");
+                    } else {
+                        second.append("<li><a href='" + subMenus[i].href + "'>" + subMenus[i].name + "</a><i></i></li>");
+                    }
+                }
+                //计算二级菜单显示坐标,默认顶部与一级菜单对齐
+                var menuPos = $(this).position();
+                subMenu.find('.tabs_con').css('top', menuPos.top);
+                subMenu.find('.tabs_con').css('bottom', '');
+                subMenu.find('.second2').show();
+                var subRect = subMenu.find('.second2').get(0).getBoundingClientRect();
+                var bottom_dis = subRect.bottom - $(window).height();
+                var top_dis = subRect.top;
+                //下边界超出屏幕时
+                if (bottom_dis > 0) {
+                    if (top_dis > subMenu.find('.second2').innerHeight()) {
+                        //上边界空间足够,设置下边界与菜单对齐
+                        subMenu.find('.tabs_con').css('top', -(subMenu.find('.second2').innerHeight() - $(this).innerHeight() - menuPos.top));
+                        subMenu.find('.tabs_con').css('bottom', '');
+                    } else {
+                        //上边界空间不足,设置与菜单居中对齐，且保证上边界不超出屏幕
+                        var top_offset = subRect.top - $(this).find('.second2').height() / 2;
+                        subMenu.find('.tabs_con').css('top', menuPos.top - $(this).find('.second2').height() / 2 - top_offset);
+                        subMenu.find('.tabs_con').css('bottom', '');
+                    }
+                }
+            }
+
+            //fixThird(e);
+        }, function () {
+            var index = $(this).index() + 1;
+            $(this).css({
+                background: 'none',
+                color: '#fff'
+            });
+            $(this).find('i.icon').removeClass('icon-' + index);
+            $(this).find('.second2').hide();
+            init();
+        });
+
+        //展开初始化
+        function init() {
+            $('.side_nav li').removeClass('cur');
+            $('.side_nav li .default').addClass('cur');
+            $('.side_nav .nav_tab ').hide();
+        }
+
+        //第三级菜单宽度固定
+        /*function fixThird(e) {
+         var width = 0;
+         $(e.target).find('.fourth').each(function(index, el) {
+         var width1 = 0;
+         $(this).find('li').each(function(index, el) {
+         width1 += ($(this).width());
+         });
+         if (width1 > width) {
+         width = width1;
+         }
+         });
+         $('.third').width(width + 100);
+         }*/
+        $('.nav_tab').css('maxHeight', $('.side_nav').height() - 40);
+
+        $('.menu_icon span').click(function () {
+            $('.menu_icon span').removeClass('menu_off');
+            $(this).addClass('menu_on').siblings().removeClass('menu_on').addClass('menu_off');
+        });
+    })
+</script>
+</body>
+
+</html>
