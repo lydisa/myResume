@@ -1,0 +1,154 @@
+/*移入增加样式20160720   公共部分*/
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,lable,select,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{font-family:'Microsoft Yahei','Simsun',"\5FAE\8F6F\96C5\9ED1";color:#606060; font-size:14px;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+/*table{width:100%;margin:0 auto; border-collapse:collapse;}*/
+address,caption,cite,code,dfn,em,th,var,i{font-style:normal;font-weight:normal;}
+small{font-size:12px;}
+ol,ul,li{list-style:none;}
+form{display:inline;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+fieldset,img{border:0;}
+img{vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;}
+textarea{resize:none;}
+button,input,select,textarea{ vertical-align:middle;outline:none;font-family:'Microsoft Yahei','Simsun',"\5FAE\8F6F\96C5\9ED1"; font-size:12px; color:#606060;}
+a{ text-decoration:none; cursor:pointer; display:inline-block; text-align:center; vertical-align:middle; font-size:12px;}
+header,footer,article,section,nav,menu,hgroup{display:block;clear:all;}
+.none { display:none;}
+.clearfix { zoom:1;}
+.clearfix:after { display:block; content:"."; clear:both; height:0; visibility:hidden;}
+.disabled { color: #999; }
+
+
+.content { width:960px; margin:0 auto;}
+/**********500*************/
+.content-wrong { width:800px; padding-top:50px;}
+.wrong-left { display:inline-block; *display:inline; *zoom:1; width:34%; vertical-align:top;}
+.pic500 { margin-left:40px;}
+.wrong-right { width:64%; margin-left:1%;}
+.title { color:#f19026; font-size:18px; line-height:40px; margin-top:10px;}
+.title img { margin-right:5px;}
+.txt-box { padding-left:20px;}
+.txt { width:96%; border:1px solid #ddd; padding:10px; font-size:12px; line-height:18px; margin-bottom:8px;}
+.p-phone { color:#353535; font-size:12px; line-height:18px;}
+
+
+/**********出错-crm*************/
+.p-orange { color:#f19026; line-height:23px;}
+.pic-crm { padding-top:50px; padding-left:50px;}
+.wrong-detail { position:absolute; top:1px; left:50%; display:inline-block; border-radius:5px; font-size:12px; color:#606060; text-decoration:underline;}
+.wrong-detail:hover { color:#6eb143;}
+.wrong-detail-box { margin-top:15px;}
+.wrong-detail-box textarea { border:1px solid #ddd; padding:10px 3%; width:94%; color:#606060; height:200px; line-height:20px;}
+
+
+/**********异常*************/
+.box-abnormal { border-bottom:none;}
+.green-line { border-bottom:1px solid #90bb54;}
+.green-line span { display:inline-block; width:77px; line-height:25px; color: #fff; text-align:center; background:#90bb54; border-top-left-radius:3px; border-top-right-radius:3px;}
+.p-code,.div-txt p { color:#333; font-size:12px; line-height:35px;}
+.div-txt { border:1px solid #ddd; padding:5px 10px; height:90px; overflow:hidden; overflow-y:auto; margin-top:13px;}
+.div-txt p { color:#333; line-height:18px;}
+.copy { position:absolute; right:0; top:5px;}
+
+
+/**********错误*************/
+.w350 { width:350px;}
+.hint-box { text-align:center; padding-bottom:8px; border-bottom:none;}
+.hint-box p { color:#606060; word-break:break-all; text-align:left;}
+
+
+/**********提问*************/
+.btn-ask a { margin:0 20px !important}
+
+
+/**********提问*************/
+.download-close { background:none; border:none;}
+
+
+/**********提问*************/
+.upload-box { text-align:left;}
+.div-upload { height:210px; overflow:hidden; overflow-y:auto; border:1px solid #ddd; padding:10px; margin-top:10px;}
+.div-upload img { margin:0 6px; margin-bottom:3px;}
+.div-upload p { padding:2px 0;}
+.upload-btns a { margin-right:10px;}
+.upload-btns a.a-one { margin-right:40px;}
+
+
+
+/**********公告*************/
+.top-title { color:#5abe3f; font-size:20px; line-height:90px;}
+.top-title img { margin-right:15px; margin-bottom:5px;}
+
+.notice-txt { border:1px solid #ddd; border-radius:10px; padding:30px 45px;}
+.notice-left { /*height:216px;*/ display:inline-block; *display:inline; *zoom:1; width:45%; vertical-align:top;}
+.notice-right { /*height:216px;*/ display:inline-block; *display:inline; *zoom:1; width:45%; vertical-align:top; margin-left:70px;}
+.notice-left li,.notice-right li { color:#606060; font-size:12px; background:url(../../images/common/public/ico_disc.png) no-repeat 0 center; padding-left:15px;}
+.notice-left li:hover,.notice-right li:hover { color:#6eb143;}
+.notice-left li a,.notice-right li a { color:#333; display:inline-block; width:405px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:left; font-size:16px; line-height:36px;}
+.notice-left li a.gray-visited,.notice-right li a.gray-visited { color:#999;}
+.notice-left li a:hover,.notice-right li a:hover { color:#6eb143; text-decoration:underline;}
+
+/*分页*/
+.pagination { text-align:right;}
+.pagination a { margin-left:20px; color:#666;}
+.pagination a:hover { color:#6eb143;}
+
+
+
+/**********帮助*************/
+.help-content { padding-bottom:5px;}
+.cont {height:154px;}
+.help-title { line-height:68px;}
+.help-search { background:#f9faf9; padding:16px 0; text-align:center;}
+.help-search input { border:1px solid #ddd; width:446px; height:34px; line-height:34px; padding:0 10px; border-radius:10px;}
+.help-search a { width:82px; height:34px; line-height:34px; color:#fff; font-size:16px; text-align:center; border-radius:10px; background:#5abe3f; margin-left:20px;}
+.help-search a:hover { background:#24a700;}
+
+.help-span span { display:inline-block; height:50px; background:#fff; line-height:50px; width:190px; border:1px solid #ddd; color:#999; text-align:center; border-right:none; cursor:pointer; margin-bottom:-1px; font-size:18px; font-weight:bold; border-top-right-radius:10px; margin-left:-14px; z-index:2; position:relative; border-right:1px solid #ddd;}
+.help-span .span-first { border-top-left-radius:10px; margin-left:0; z-index:3;}
+.help-span .span-last { border-right:1px solid #ddd; z-index:1;}
+.help-span .span-on,.help-span span:hover { color:#5abe3f;}
+.help-span .span-on { border-bottom:1px solid #fff;}
+.help-span span a  { display:inline-block; font-size:18px; font-weight:bold; position:relative;}
+.help-span span i { display:inline-block; width:20px; height:20px; line-height:20px; border-radius:100%; color:#fff; position:absolute; top:9px; right:-21px; font-size:10px; text-align:center; background:url(../../images/common/public/num_bg.png) no-repeat 0 0;}
+
+.help-txt { border-top-left-radius:0; padding:15px 105px; padding-right:45px;}
+.help-txt .notice-left,.help-txt .notice-right {overflow:hidden;}
+.help-txt .notice-left li a,.help-txt .notice-right li a { width:349px; line-height:28px;}
+
+
+
+/**********公告详情*************/
+.txt-title { text-align:center; color:#90bb54; font-size:18px; margin-bottom:12px;}
+.notice-detail { height:300px; overflow:hidden; overflow-y:auto;}
+.notice-detail p { line-height:24px; margin-bottom:10px;}
+
+
+
+/**********公告预览*************/
+.title-detail { width:75%; margin:0 auto;}
+.title-detail li { display:inline-block; *display:inline; *zoom:1; width:35%; margin:3px 0 15px; text-align:center; font-size:12px;}
+.title-detail li.li-last { width:18%;}
+.p-download { padding:25px 0 10px;}
+.p-download img { margin-right:5px;}
+.p-download a { color:#90bb54; text-decoration:underline; margin-left:10px;}
+.p-download a:hover { color:#599504;}
+
+
+
+/**********业务受理流程帮助说明*************/
+.w600 { width:826px;}
+.instruction-box { border-bottom:none; padding:15px 0 0;}
+.instruction-title { color:#90bb54; text-align:center; margin-bottom:10px;}
+.instruction-txt { height:208px; overflow:hidden; overflow-y:auto; width:90%; margin:0 auto; text-indent:2em;}
+.instruction-txt p { font-size:12px; line-height:24px;}
+.instruction-download { background:#f8f8f8; padding:10px 20px; margin-top:15px;}
+.instruction-download h4 { text-align:center; padding:3px 0 12px; color:#666;}
+.instruction-download div { height:80px; overflow:hidden; overflow-y:auto;}
+.instruction-download div li { width:32%; display:inline-block; *display:inline; *zoom:1;}
+.instruction-download div li a { color:#606060; text-decoration:underline; margin-bottom:10px; background:url(../../images/common/public/ico_download.png) no-repeat 0 center; padding-left:20px; display:inline-block; width:200px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:left;}
+.instruction-download div li a:hover { color:#90bb54;}
+
+.error_box { text-align: center; padding: 50px 0 115px;}
+.error_footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #ededed; text-align: center; line-height: 80px; font-size: 14px; color: #666;}

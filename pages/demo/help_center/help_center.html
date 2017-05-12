@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>帮助中心</title>
+        <script type="text/javascript" src="../../../libs/jquery.min.js"></script>
+    <link href="../../../styles/css/help_center.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../styles/css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../styles/css/hint.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../styles/css/public.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="bg">
+
+<div class="m_content f_pdb0">
+    <div class="f_pr">
+        <!--查询 start-->
+        <div class="menu">
+            <div class="menu_l">
+                <!--左侧菜单顶部LOGO-->
+                <h3 class="menu_top f_tac"><i><img class="f_marr10"
+                                                   src="../../../skin/default/images/common/public/content.png"></i>帮助中心
+                </h3>
+                <!--左侧菜单顶部LOGO end-->
+                <!--左侧菜单列表-->
+                <div class="all-goods">
+                    <div class="div_white f_mart0">
+                        <div class="m_title menu_opened">
+                            <a>热门问题</a>
+                            <span>
+                                <img class="up none" src="../../../skin/default/images/common/public/menu_up.png">
+                                <img class="down " src="../../../skin/default/images/common/public/menu_down.png">
+                            </span>
+                        </div>
+                        <div class="menu_sub ">
+                            <ul>
+                                <li class="menu_item active" id="1"><a>客户配置工具</a></li>
+                                <li class="menu_item" id="7"><a>系统登录问题</a></li>
+                                <li class="menu_item" id="3"><a>票据与回执打印</a></li>
+                                <li class="menu_item" id="10"><a>本地读卡写卡</a></li>
+                                <li class="menu_item"><a>无纸化设备</a></li>
+                                <li class="menu_item"><a>评价器与密码键盘</a></li>
+                                <li class="menu_item"><a>身份证读卡器</a></li>
+                                <li class="menu_item"><a>摄像头拍照设备</a></li>
+                                <li class="menu_item" id="4"><a>业务类</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="div_white f_mart0">
+                        <div class="m_title">
+                            <a>系统检测与运行</a>
+                            <span>
+                                <img class="up none" src="../../../skin/default/images/common/public/menu_up.png">
+                                <img class="down " src="../../../skin/default/images/common/public/menu_down.png">
+                            </span>
+                        </div>
+                        <div class="menu_sub none">
+                            <ul>
+                                <li class="menu_item" onclick="loadPage2('one_key_detection.html')"><a>一键检测</a></li>
+                                <li class="menu_item" onclick="loadPage2('one_key_install.html')"><a>一键安装</a></li>
+                                <li class="menu_item" onclick="loadPage2('remote_assistance.html')"><a>远程协助</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="div_white f_mart0">
+                        <div class="m_title ">
+                            <a>系统操作指引</a>
+                            <span>
+                                <img class="up none" src="../../../skin/default/images/common/public/menu_up.png">
+                                <img class="down " src="../../../skin/default/images/common/public/menu_down.png">
+                            </span>
+                        </div>
+                        <div class="menu_sub none">
+                            <ul>
+                                <li class="menu_item"><a>二级菜单</a></li>
+                                <li class="menu_item"><a>二级菜单</a></li>
+                                <li class="menu_item"><a>二级菜单</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="div_white f_mart0 menu_item" onclick="loadPage('take_photo.html')">
+                        <div class="m_title ">
+                            <a>经办人拍照指南</a>
+                        </div>
+                    </div>
+                    <div class="div_white f_mart0 menu_item" onclick="loadPage('card_reader.html')">
+                        <div class="m_title ">
+                            <a>读卡器安装指南</a>
+                        </div>
+                    </div>
+                    <div class="div_white f_mart0" id="6">
+                        <div class="m_title ">
+                            <a>其他知识库</a>
+                            <span>
+                                <img class="up none" src="../../../skin/default/images/common/public/menu_up.png">
+                                <img class="down " src="../../../skin/default/images/common/public/menu_down.png">
+                            </span>
+                        </div>
+                        <div class="menu_sub none">
+                            <ul>
+                                <li class="menu_item" id="8"><a>windows常用操作</a></li>
+                                <li class="menu_item" id="9"><a>浏览器常用操作</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="div_white f_mart0">
+                        <div class="m_title">
+                            <a>关于CRM+</a>
+                            <span>
+                                <img class="up none" src="../../../skin/default/images/common/public/menu_up.png">
+                                <img class="down " src="../../../skin/default/images/common/public/menu_down.png">
+                            </span>
+                        </div>
+                        <div class="menu_sub none">
+                            <ul>
+                                <li class="menu_item" onclick="loadPage('about_us.html',true)"><a>介绍CRM+</a></li>
+                                <li class="menu_item" onclick="loadPage('contact_us.html',true)"><a>联系我们</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--左侧菜单列表 end-->
+            </div>
+            <!--查询 end-->
+            <!--查询结果-->
+            <div class="menu_r">
+                <!--右侧-->
+                <div class="div_white f_mart14" id="result02">
+                    <div class="f_pdt10">
+                        <div id="tabs1" class="mini-tabs tabs2" activeIndex="0" plain="true">
+                            <div title="帮助中心">
+                                <div class="none" id="helpPage"></div>
+                                <div class="f_pdl50 f_pdr50 f_pdb20">
+                                    <div id="page_1">
+                                        <!--搜索框-->
+                                        <div class="f_tac t_search" id="searchInput">
+                                            <input class="border_gray helpInput" value="请输入产品或问题"/>
+                                            <input type="button" class="a_basic w72 helpSearch" value="查 询"/>
+                                        </div>
+                                        <!--搜索框 end-->
+                                        <div id="question_list">
+                                            <!--问题列表-->
+                                            <div id="list1" 
+                                                 style="margin-top:20px;margin-bottom:25px; min-height: 272px; overflow: hidden;">
+                                                <ul>
+                                                    <li><a class="green_link" onclick="loadPage('client_config1.html')">1.客户端配置系统提示反复安装（一）</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config5.html')">2.客户端配置系统提示反复安装（二）</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config2.html')">3.无法执行临时目录中的文件。安装中断</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config3.html')">4.下载文件[]失败，错误信息：Cannot create file...</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config4.html')">5.对不起，当前版本太旧，已无法在线升级</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config6.html')">6.本地写卡错误</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config7.html')">7.安装时出错 --修改成--》未指定的错误</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config8.html')">8.升级时提示：无法覆盖文件[from C:\Program File\Crm客户端配置...</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config9.html')">9.IP()不在ACC允许范围内</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('client_config10.html')">10.无法使用密码键盘和评价器</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--<div id="list2" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <ul>
+                                                    <li><a class="green_link" onclick="loadPage('load_slow1.html')">1.系统运行慢</a>
+                                                    </li>
+                                                </ul>
+                                            </div>-->
+                                            <div id="list3" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <!--收据回执-->
+                                                <ul>
+                                                    <li><a class="green_link"
+                                                           onclick="loadPage('print_write_card.html')">1.纸质回执与一次性费收据打印设置，解决打印不清晰、打印缺失问题!</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('key_detection.html')">2.IE8报表展示页面，点击打印按钮显示一直加载中的弹窗，怎么办？</a>
+                                                    </li>
+                                                    <li><a class="green_link"
+                                                           onclick="loadPage('key_detection4.html')">3.专票无法正常打印，怎么办？</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="list4" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <!--业务类-->
+                                                <ul>
+                                                    <li><a class="green_link" onclick="loadPage('key_detection2.html')">1.退费录入点确定无反应，什么原因？</a>
+                                                    <li><a class="green_link" onclick="loadPage('key_detection3.html')">2.已有客户，但首页无法查出客户信息，怎么办？</a>
+                                                    <li><a class="green_link" onclick="loadPage('key_detection5.html')">3.火狐浏览器不能复制，怎么办？</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="list7" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <!--系统登录问题-->
+                                                <ul>
+                                                    <li><a class="green_link" onclick="loadPage('system_login1.html')">1.登录无法收到短信验证码？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('system_login2.html')">2.登录失败，因密码错误次数超限，账号已冻结，怎么办？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('system_login3.html')">3.当前工号登录使用的IP('***')不在ACC允许范围内，请按业务管理要求登录或联系分公司管理员取消IP限制！</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('system_login4.html')">4.调用ACC认证接口失败，输入的工号或密码错误!</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('system_login5.html')">5.登录首页指纹显示空白，指纹按压无反应，无法进入系统！</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="list8" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <!--其他知识库-->
+                                                <ul>
+                                                    
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge4.html')">1.如何查看本机的IP？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge6.html')">2.如何查看任务管理器？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge7.html')">3.如何查看本机能否ping通某个地址，如集团4G(crm.189.cn)？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge5.html')">4.如何通过远程桌面进行远程协助？（被远程的电脑设置）</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge11.html')">5.如何用TeamViewer远程协助？</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="list9" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <!--其他知识库-->
+                                                <ul>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge1.html')">1.如何查看浏览器版本？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge2.html')">2.如何清浏览器缓存？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge3.html')">3.如何火狐禁止更新？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge8.html')">4.如何查看浏览器模式？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge9.html')">5.教您查看您的浏览是32位的还是64位的？</a>
+                                                    </li>
+                                                    <li><a class="green_link" onclick="loadPage('other_knowledge10.html')">6.如何查看添加可信任站点？</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="list10" class=" none"
+                                                 style="margin-top:20px;margin-bottom:25px; height: 272px; overflow: hidden;">
+                                                <!--本地读卡写卡-->
+                                                <ul>
+                                                    <li><a class="green_link" onclick="loadPage('card_reader1.html')">1.远程写卡设置指引。</a>
+                                                    <li><a class="green_link" onclick="loadPage('card_reader2.html')">2.驱动与组件安装指南。</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!--问题列表 end-->
+                                        </div>
+                                        <div id="main_panel"></div>
+                                        <!--自助工具-->
+                                        <div id="tools">
+                                            <div class="t_title f_pdt20 f_pdb8">
+                                                <strong><i><img
+                                                        src="../../../skin/default/images/common/public/bag.png"></i>自助工具</strong>
+                                            </div>
+                                            <div class="btn-group">
+                                                <input class="helpBtn f_marr10" type="button" value="IE8提速补丁">
+                                                <input class="helpBtnBorder f_marr10" type="button" value="IE8提速补丁">
+                                                <input class="helpBtnBorder f_marr10" type="button" value="IE8提速补丁">
+                                                <input class="helpBtnBorder f_marr10" type="button" value="IE8提速补丁">
+                                                <input class="helpBtnBorder f_marr10" type="button" value="IE8提速补丁">
+                                            </div>
+                                        </div>
+                                        <!--自助工具 end-->
+                                        <!--问题反馈-->
+                                        <div class="bg-gray none" id="result">
+                                            <span class="f_fs14">以上信息是否解决了您的问题？</span>
+                                            <span class="f_marl35">
+                                                <button class="a_basic a_big f_marr10">是&nbsp;&nbsp;&nbsp;6</button>
+                                                <button class="a_basic a_big a_white f_marr10">否&nbsp;&nbsp;&nbsp;2
+                                                </button>
+                                            </span>
+                                        </div>
+                                        <!--问题反馈 end-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div title="操作指引下载">
+                                <!-- 操作指引下载-->
+                                <div class="notice-txt help-txt">
+                                    <div class="notice-left">
+                                        <ul>
+                                            <li><a href="###" onclick="onBanZhu()">创建新客户</a></li>
+                                            <li><a href="###">CRM门户系统操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###" onclick="onBanZhu()">创建新客户</a></li>
+                                            <li><a href="###">CRM门户系统操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="notice-right">
+                                        <ul>
+                                            <li><a href="###">创建新客户</a></li>
+                                            <li><a href="###">CRM门户系统操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">创建新客户</a></li>
+                                            <li><a href="###">CRM门户系统操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--分页-->
+                                    <div class="pagination f_mart20 f_marr50">
+                                        <span>页次1/1&nbsp;&nbsp;共12条记录</span><a>[最前页]</a><a>上一页</a><a>下一页</a><a>[最后页]</a>
+                                    </div>
+                                    <!--分页 end-->
+                                </div>
+                            </div>
+                            <div title="常见问题">
+                                <!-- 常见问题-->
+                                <div class="notice-txt help-txt">
+                                    <div class="notice-left">
+                                        <ul>
+                                            <li><a href="###">登陆异常原因</a></li>
+                                            <li><a href="###">登陆异常原因</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="notice-right">
+                                        <ul>
+                                            <li><a href="###">创建新客户</a></li>
+                                            <li><a href="###">CRM门户系统操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--分页-->
+                                    <div class="pagination f_mart20 f_marr50">
+                                        页次1/1&nbsp;&nbsp;共12条记录<a>[最前页]</a><a>上一页</a><a>下一页</a><a>[最后页]</a>
+                                    </div>
+                                    <!--分页 end-->
+                                </div>
+                            </div>
+                            <div title="工具下载">
+                                <!-- 工具下载-->
+                                <div class="notice-txt help-txt">
+                                    <div class="notice-left">
+                                        <ul>
+                                            <li><a href="###">打印收费控件下载</a></li>
+                                            <li><a href="###">打印收费控件下载</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="notice-right">
+                                        <ul>
+                                            <li><a href="###">创建新客户</a></li>
+                                            <li><a href="###">CRM门户系统操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">4G业务受理操作指引</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                            <li><a href="###">关于公司金视通萌宝秀活动的奖励公布的通知</a></li>
+                                            <li><a href="###">自营厅4G业务受理操作指引</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--分页-->
+                                    <div class="pagination f_mart20 f_marr50">
+                                        页次1/1&nbsp;&nbsp;共12条记录<a>[最前页]</a><a>上一页</a><a>下一页</a><a>[最后页]</a>
+                                    </div>
+                                    <!--分页 end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--右侧 end-->
+            </div>
+            <!--查询结果 end-->
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        //选中菜单事件
+        $('.all-goods .menu_item').click(function (e) {
+            //清除之前选中的菜单的样式
+            var oldSeleted = $(".menu_l").find(".active");
+            oldSeleted.removeClass("active");
+            $("#list" + oldSeleted.attr('id')).hide();
+            //设选中菜单为选中状态
+            $(this).addClass('active');
+            // $(this).parents('.div_white').find('.m_title').addClass('active');
+            //显示对应问题列表
+            var id = $(this).attr('id');
+            if (id) {
+                $('#helpPage').hide();
+                $("#searchInput").show();
+                $("#question_list").show();
+                $("#tools").show();
+                $("#list" + id).show();
+                $("#main_panel").hide();
+                $("#result").hide();
+            }
+        });
+        //展开菜单事件
+        $(".menu_l .m_title").click(function () {
+            var oldMenu = $(".menu_opened");
+            if ($(this).hasClass("menu_opened")) {
+                //收起
+                $(this).find(".up").addClass("none");
+                $(this).find(".down").removeClass("none");
+                $(this).siblings().slideUp('fast');
+                $(this).removeClass("menu_opened");
+            } else {
+                //展开
+                $(this).siblings().slideDown('fast');
+                $(this).addClass("menu_opened");
+                $(this).find(".down").addClass("none");
+                $(this).find(".up").removeClass("none");
+            }
+            //收起其他菜单
+            if (oldMenu.length > 0) {
+                oldMenu.siblings().slideUp('fast');
+                oldMenu.removeClass("menu_opened");
+                oldMenu.find(".up").addClass("none");
+                oldMenu.find(".down").removeClass("none");
+            }
+
+        });
+    });
+        function loadPage(url,notShowTools) {
+            $('#helpPage').hide();
+            if (url && url.length > 0) {
+                $("#question_list").hide();
+                $("#main_panel").load(url);
+                $("#main_panel").show();
+                $("#result").show();
+                if(notShowTools){
+                    $("#searchInput").hide();
+                    $("#tools").hide();
+                    $("#result").hide();
+
+                }else{
+                    $("#searchInput").show();
+                    $("#tools").show();
+                }
+            }
+        }
+    function loadPage2(url){
+        if(url){
+            $('#helpPage').show();
+            $("#searchInput").hide();
+            $("#tools").hide();
+            $("#result").hide();
+            $('#helpPage').load(url);
+        }
+    }
+</script>
+
+</body>
+</html>

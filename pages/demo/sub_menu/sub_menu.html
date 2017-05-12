@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../../../libs/jquery.min.js"></script>
+    <title>销售服务门户</title>
+</head>
+<style type="text/css">
+    body {
+        font-size: 13px;
+    }
+    
+    .icon_right {
+        position: relative;
+        top: 6px;
+        float: right;
+        left: 20px;
+    }
+    
+    .second2 .icon_right {
+        left: 0;
+    }
+    
+    .second2 {
+        max-height: 300px
+    }
+    
+    .side_nav .tabs_con {
+        position: absolute;
+        top: 500px;
+        left: 200px;
+        width: 604px;
+    }
+    
+    .tabControl .u_fun {
+        width: 200px;
+    }
+    
+    .menu_icon span em {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+    
+    .menu_icon .menu_off em {
+        background: url("../../../skin/default/images/bizprov/index/icon_off.png") no-repeat;
+    }
+    
+    .menu_icon .menu_on em {
+        background: url("../../../skin/default/images/bizprov/index/icon_on.png") no-repeat;
+    }
+    /*首页改版-侧边导航栏*/
+    
+    .side_nav {
+        position: absolute;
+        color: #fff;
+        width: 200px;
+        background: #1B1B1B;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    .side_nav a {
+        display: inline-block;
+        color: inherit;
+    }
+    
+    .side_nav .tabs_con {
+        width: 750px;
+        position: absolute;
+        left: 200px;
+        z-index: 1000;
+        overflow: hidden;
+    }
+    
+    .side_nav .search_blk {
+        margin: 20px 0 10px 0;
+    }
+    
+    .side_nav .search_blk input {
+        background: #3b7d22;
+        color: #9dbe91;
+        height: 30px;
+        border: none;
+        padding-left: 10px;
+        width: 120px;
+        border-radius: 3px;
+    }
+    
+    .side_nav .search_blk span {
+        background: #f0f7e7;
+        height: 28px;
+        display: inline-block;
+        width: 35px;
+        cursor: pointer;
+    }
+    
+    .side_nav .search_blk i {
+        position: relative;
+        top: 5px;
+    }
+    
+    .side_nav li {
+        padding: 8px 34px;
+    }
+    
+    .side_nav li .icon {
+        position: absolute;
+        left: 25px;
+        top: 13px;
+    }
+    
+    .side_nav .nav_tab {
+        color: #131313;
+        z-index: 999;
+        background: #f5f5f5;
+        border: 2px solid #1B1B1B;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: none;
+    }
+    
+    .side_nav .nav_tab li {
+        padding: 10px 20px;
+    }
+    
+    .side_nav .first>li {
+        position: relative;
+    }
+    
+    .side_nav .second {
+        width: 200px;
+    }
+    
+    .side_nav li.cur {
+        background: #477713;
+        color: #fff;
+    }
+    
+    .side_nav .second2 {
+        width: 520px;
+        padding: 20px 40px;
+        background-color: #fff;
+    }
+    
+    .side_nav .second2 li {
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    .side_nav .second2 .litit {
+        display: block;
+        font-weight: bold;
+    }
+    
+    .side_nav .second2 li i {
+        display: inline-block;
+        height: 13px;
+        vertical-align: middle;
+        border-right: 1px solid #D6D6D6;
+        margin: 0 0 0 10px;
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: initial;
+        color: #4b4f4a;
+    }
+    
+    ul {
+        padding: 0
+    }
+    
+    html,
+    body {
+        scrollbar-face-color: #a9c58a;
+        /*滚动条3D表面（ThreedFace）的颜色*/
+        scrollbar-highlight-color: #4b942c;
+        /*滚动条3D界面的亮边（ThreedHighlight）颜色*/
+        scrollbar-shadow-color: #4b942c;
+        /*滚动条3D界面的暗边（ThreedShadow）颜色*/
+        scrollbar-3dlight-color: #4b942c;
+        /*滚动条亮边框颜色*/
+        scrollbar-arrow-color: #a9c58a;
+        /*滚动条方向箭头的颜色 */
+        scrollbar-track-color: #4b942c;
+        /*滚动条的拖动区域(TrackBar)颜色*/
+        scrollbar-darkshadow-color: #4b942c;
+        /*滚动条暗边框（ThreedDarkShadow）颜色*/
+    }
+    /*---滚动条默认显示样式--*/
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        height: 50px;
+        outline-offset: -2px;
+        outline: 2px solid #4b942c;
+        -webkit-border-radius: 4px;
+        border: 2px solid #CBCBCB;
+    }
+    /*---鼠标点击滚动条显示样式--*/
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background-color: #E9E9E9;
+        height: 50px;
+        -webkit-border-radius: 6px;
+    }
+    /*---滚动条大小--*/
+    
+     ::-webkit-scrollbar {
+        width: 10px;
+        height: 8px;
+    }
+    /*---滚动框背景样式--*/
+    
+     ::-webkit-scrollbar-track-piece {
+        background-color: #000;
+        -webkit-border-radius: 0;
+    }
+</style>
+
+<body class=" overflow_xh">
+
+    <!-- 二级菜单-->
+    <div class="side_nav" id="sub_menu">
+        <div class="tabs_con">
+            <ul class="nav_tab second2">
+            </ul>
+        </div>
+    </div>
+    <!--一级菜单-->
+    <div class="side_nav" style="overflow:auto ;">
+        <ul class="first"></ul>
+    </div>
+    <!-- *** 开始 *** -->
+
+    <!-- *** JS *** -->
+    <script type="text/javascript" src='sub_menu.js'></script>
+</body>
+
+</html>
