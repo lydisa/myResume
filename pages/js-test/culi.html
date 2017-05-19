@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let add = (...a) => {
+  let helper = (...b) => {
+    return add(...[...a, ...b]);
+  };
+ 
+  helper.toString = helper.valueOf = () => {
+    let sum = 0;
+    for (let item of a)
+      sum += item;
+    return sum;
+  };
+ 
+  return helper;
+};
+
+console.log(add(1,2)(3)(4,5));
+</script>
+</html>

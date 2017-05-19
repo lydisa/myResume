@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+a.map入参接受一个function函数，默认传入element,index,array本身 三个参数
+
+parseInt入参接受2个参数 valStr和进制数，且valStr中任意一位数不能超过进制数，否则报错，
+比如parseInt（"123"，2）会报错，因为"123"不可能是二进制数，无法将"123"按二进制的算法转成10进制的整数
+如果进制数填0或null，按10进制计算
+</body>
+<script>
+    function parseInt(str, radix) {
+        return str + '-' + radix;
+    };
+    var a = ["1", "2", "3"];
+    console.log(a.map(parseInt));//[1,Nah,Nah]
+</script>
+
+</html>

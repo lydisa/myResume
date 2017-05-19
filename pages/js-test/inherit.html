@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function People(){
+    this.entity="charactor";
+}
+function Woman(name,age){
+    this.age = age;
+    this.name = name;
+}
+    Woman.prototype=new People();
+
+var jane = new Woman("Jane",14);
+console.log(jane.age);
+console.log(jane.entity);
+</script>
+</html>
