@@ -1,0 +1,199 @@
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>视差滚动原理三</title>
+	<style>
+		body {
+			height: 3000px;
+			overflow-x: hidden;
+		}
+		
+		.scene {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		
+		img {
+			position: fixed;
+		}
+		
+		#scene_back {}
+		
+		#scene_center {}
+		
+		#scene_front {}
+		
+		#bridge_cube_1 {
+			width: 172px;
+			top: 570px;
+			left: 384px;
+		}
+		
+		#bridge_cube_2 {
+			width: 172px;
+			top: 554px;
+			left: 544px;
+		}
+		
+		#bridge_cube_3 {
+			width: 172px;
+			top: 472px;
+			left: 526px;
+		}
+		
+		#bridge_cube_4 {
+			width: 172px;
+			top: 459px;
+			left: 692px;
+		}
+		
+		#bridge_cube_5 {
+			width: 172px;
+			top: 373px;
+			left: 672px;
+		}
+		
+		#bridge_cube_6 {
+			width: 172px;
+			top: 358px;
+			left: 834px;
+		}
+		
+		#bridge_cube_7 {
+			width: 172px;
+			top: 275px;
+			left: 821px;
+		}
+		
+		#bridge_cube_8 {
+			width: 172px;
+			top: 265px;
+			left: 985px;
+		}
+		
+		#bridge_cube_9 {
+			width: 172px;
+			top: 166px;
+			left: 972px;
+		}
+		
+		#bridge_cube_10 {
+			width: 172px;
+			top: 161px;
+			left: 1150px;
+		}
+		
+		#land_cube_1 {
+			width: 416px;
+			top: 0px;
+			left: 1152px;
+		}
+		
+		#land_cube_2 {
+			width: 416px;
+			top: 602px;
+			left: 120px;
+		}
+	</style>
+	<style id="style-1-cropbar-clipper">
+
+		/* Copyright 2014 Evernote Corporation. All rights reserved. */
+		
+		.en-markup-crop-options {
+			top: 18px !important;
+			left: 50% !important;
+			margin-left: -100px !important;
+			width: 200px !important;
+			border: 2px rgba(255, 255, 255, .38) solid !important;
+			border-radius: 4px !important;
+		}
+		
+		.en-markup-crop-options div div:first-of-type {
+			margin-left: 0px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<img src="cube_red.png" id="land_cube_1">
+		<img src="cube_yellow.png" id="bridge_cube_10">
+		<img src="cube.png" id="bridge_cube_9">
+		<img src="cube_yellow.png" id="bridge_cube_8">
+		<img src="cube_red.png" id="bridge_cube_7">
+		<img src="cube.png" id="bridge_cube_6">
+		<img src="cube_red.png" id="bridge_cube_5">
+		<img src="cube_red.png" id="bridge_cube_4">
+		<img src="cube_yellow.png" id="bridge_cube_3">
+		<img src="cube.png" id="bridge_cube_2">
+		<img src="cube.png" id="bridge_cube_1">
+		<img src="cube_yellow.png" id="land_cube_2">
+	</div>
+
+	<script>
+		window.onload = function () {
+			var imgs = document.getElementsByTagName('img');
+			var imgMoves = [];
+			for (var i = 0; i < imgs.length; i++) {
+				var targetTop = imgs[i].offsetTop;
+				// var initTop = -imgs[i].offsetHeight - Math.random() * 4000;
+				var initTop = -imgs[i].offsetHeight - (imgs.length-1-i) * 1000;
+				imgMoves.push({
+					targetTop: targetTop,
+					initTop: initTop
+				});
+				imgs[i].style.top = initTop + 'px';
+				console.log("cube_" + i + ":" + imgs[i].style.top);
+
+			}
+			var sceneBack = document.getElementById('scene_back'),
+				sceneCenter = document.getElementById('scene_center'),
+				sceneFront = document.getElementById('scene_front');
+			var old_top1 = 0,
+				old_top2 = 200,
+				old_top3 = 700;
+
+			addEvent(window, 'scroll', onScroll);
+			onScroll();
+
+			function onScroll(e) {
+				var docHeight = document.documentElement.clientHeight;
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;　
+				var clientHeight = 0;
+					if (document.compatMode == "CSS1Compat") {
+						clientHeight = document.documentElement.clientHeight;　　
+					} else {
+						clientHeight = document.body.clientHeight;　　
+					}
+
+				for (var i = 0; i < imgs.length; i++) {
+					var targetTop = imgMoves[i].targetTop;
+					var initTop = imgMoves[i].initTop;
+					var k =scrollTop/(docHeight-clientHeight);
+					imgs[i].style.top = (targetTop - initTop) * k*2+ initTop;
+				}
+			}
+
+			function addEvent(eventTarget, eventType, eventHandler) {
+				if (eventTarget.addEventListener) {
+					eventTarget.addEventListener(eventType, eventHandler, false);
+				} else {
+					if (eventTarget.attachEvent) {
+						eventType = "on" + eventType;
+						eventTarget.attachEvent(eventType, eventHandler);
+					} else {
+						eventTarget["on" + eventType] = eventHandler;
+					}
+				}
+			}
+		}
+	</script>
+
+
+	<div id="NiuniuCaptureEvent" style="display: none;"></div>
+</body>
+
+</html>

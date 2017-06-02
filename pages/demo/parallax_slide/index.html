@@ -1,0 +1,139 @@
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<title>视差滚动原理三</title>
+<style>
+body{
+	height: 3000px;
+	overflow-x: hidden; 
+}
+.scene{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+img{
+	position: absolute;
+
+}
+#scene_back{
+}
+#scene_center{
+}
+#scene_front{
+
+}
+
+
+#pokemon1{
+	width: 150px;
+	top: 200px;
+	left: 50px;
+}
+#pokemon2{
+	width: 300px;
+	left: 800px;
+	top: 450px;
+}
+#pokemon3{
+	top: 600px;
+	left: 150px;
+}
+
+#pokemon4{
+	width: 200px;
+	left: 800px;
+	top: 400px;
+}
+#pokemon5{
+	width: 300px;
+	left: 500px;
+	top: 500px;
+}
+#pokemon6{
+	top: 1200px;
+}
+
+#pokemon7{
+	width: 150px;
+	left: 250px;
+	top: 550px;
+}
+#pokemon8{
+	width: 300px;
+	left: 100px;
+	top: 900px;
+}
+#pokemon9{
+	top: 1400px;
+	left: 400px;
+}
+
+ 
+</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+<body>
+
+<div id="scene_back" class="scene" style="top: 0.9px;">
+	<img id="pokemon1" src="cube.png">
+	<img id="pokemon4" src="cube_yellow.png">
+	<img id="pokemon7" src="cube_red.png">
+</div>
+<div id="scene_center" class="scene" style="top: 200.7px;">
+	<img id="pokemon2" src="cube_yellow.png">
+	<img id="pokemon5" src="cube.png">
+	<img id="pokemon8" src="cube_red.png">
+</div>
+<div id="scene_front" class="scene" style="top: 700.3px;">
+	<img id="pokemon3" src="cube_red.png">
+	<img id="pokemon6" src="cube_yellow.png">
+	<img id="pokemon9" src="cube.png">
+</div>
+
+<script>
+	var sceneBack = document.getElementById('scene_back'),
+		sceneCenter = document.getElementById('scene_center'),
+		sceneFront = document.getElementById('scene_front');
+	var old_top1 = 0,
+		old_top2 = 200,
+		old_top3 = 700;
+
+	addEvent(window,'scroll',onScroll);
+	onScroll();
+
+	function onScroll(e){
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		sceneBack.style.top = old_top1+scrollTop*.9+'px';
+		sceneCenter.style.top = old_top2+scrollTop*.7+'px';
+		sceneFront.style.top = old_top3+scrollTop*.3+'px';	
+	}
+
+   	function addEvent(eventTarget, eventType, eventHandler) {
+	    if (eventTarget.addEventListener) {
+	        eventTarget.addEventListener(eventType, eventHandler, false);
+	    } else {
+	        if (eventTarget.attachEvent) {
+	            eventType = "on" + eventType;
+	            eventTarget.attachEvent(eventType, eventHandler);
+	        } else {
+	            eventTarget["on" + eventType] = eventHandler;
+	        }
+	    }
+    }
+
+</script>
+
+
+<div id="NiuniuCaptureEvent" style="display: none;"></div></body></html>
