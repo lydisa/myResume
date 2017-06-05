@@ -26,82 +26,55 @@
 		
 		#scene_front {}
 		
-		#bridge_cube_1 {
-			width: 172px;
-			top: 570px;
-			left: 384px;
-		}
 		
 		#bridge_cube_2 {
-			width: 172px;
-			top: 554px;
-			left: 544px;
-		}
-		
-		#bridge_cube_3 {
-			width: 172px;
-			top: 472px;
-			left: 526px;
+			width: 11%;
+			top: 74.7%;
+			left: 21.8%;
 		}
 		
 		#bridge_cube_4 {
-			width: 172px;
-			top: 459px;
-			left: 692px;
+			width: 11%;
+			top: 64.6%;
+			left: 34.0%;
 		}
 		
-		#bridge_cube_5 {
-			width: 172px;
-			top: 373px;
-			left: 672px;
-		}
 		
 		#bridge_cube_6 {
-			width: 172px;
-			top: 358px;
-			left: 834px;
+			width: 11%;
+			top: 51.4%;
+			left: 46.9%;
 		}
 		
-		#bridge_cube_7 {
-			width: 172px;
-			top: 275px;
-			left: 821px;
-		}
 		
 		#bridge_cube_8 {
-			width: 172px;
-			top: 265px;
-			left: 985px;
-		}
-		
-		#bridge_cube_9 {
-			width: 172px;
-			top: 166px;
-			left: 972px;
+			width: 11%;
+			top: 38.3%;
+			left: 59.4%;
 		}
 		
 		#bridge_cube_10 {
-			width: 172px;
-			top: 161px;
-			left: 1150px;
+			width: 11%;
+			top: 24.2%;
+			left: 70.9%;
 		}
 		
 		#land_cube_1 {
-			width: 416px;
-			top: 0px;
-			left: 1152px;
+			width: 29%;
+			top: 0%;
+			left: 76%;
 		}
 		
 		#land_cube_2 {
-			width: 416px;
-			top: 602px;
-			left: 193px;
+			width: 29%;
+			top: 75.4%;
+			left: 0.4%;
 		}
 		
 		#role {
-			width: 230px;
-			top: -40px;
-			left: 1260px;
+			width: 16%;
+			top: -0.05%;
+			left: 87.5%;
 		}
 
 		#cloud_1{top:600px;left:400px;width:120px}
@@ -115,10 +88,10 @@
 		@keyframes myfirst {
 			0%{margin-top: 0}
 			25% {
-				margin-top: 10px
+				margin-top: 5px
 			}
 			75% {
-				margin-top: -10px
+				margin-top: -5px
 			}
 			100%{margin-top: 0}
 		}
@@ -126,10 +99,10 @@
 		@keyframes myfirst_rev {
 			0%{margin-top: 0}
 			25% {
-				margin-top: -10px
+				margin-top: -5px
 			}
 			75% {
-				margin-top: 10px
+				margin-top: 5px
 			}
 			100%{margin-top: 0}
 		}
@@ -137,10 +110,10 @@
 		@keyframes tip {
 			0%{margin-top: 0}
 			12.5% {
-				margin-top: -10px
+				margin-top: -5px
 			}
 			37.5% {
-				margin-top: 10px
+				margin-top: 5px
 			}
 			50%{margin-top: 0}
 			62.5%{margin-top:-5px}
@@ -195,6 +168,7 @@
 			-o-animation: myfirst_rev 5s infinite alternate;
 		}
 	</style>
+
 	<style id="style-1-cropbar-clipper">
 
 		/* Copyright 2014 Evernote Corporation. All rights reserved. */
@@ -264,7 +238,7 @@
 					targetTop: targetTop,
 					initTop: initTop
 				});
-				imgs[i].style.top = initTop + 'px';
+				//imgs[i].style.top = initTop + 'px';
 
 			}
 			var sceneBack = document.getElementById('scene_back'),
@@ -289,12 +263,13 @@
 				clientHeight = document.body.clientHeight;　　
 			}
 
-			if (scrollTop < docHeight * 0.35) {
-				rollDown(0,1);
+			if (scrollTop < docHeight * 0.360) {
+				//rollDown(0,0.360);
+				walk(0,1);
 			} else if (scrollTop < docHeight * 0.7) {
-				walk(0.35,1);
+				walk(0,1);
 			} else {
-				walk(0.35,1);
+				walk(0,1);
 			}
 
 
@@ -319,7 +294,7 @@
 				var initTop = imgMoves[i].initTop;
 				//k为当前滚动条的位置占指定的开始到结束区间的百分比
 				var k = (scrollTop / (docHeight - clientHeight)-beginScrollTopK)/(endScrollTopK-beginScrollTopK);
-				imgs[i].style.top = (targetTop - initTop) * k * 2 + initTop;
+				imgs[i].style.top = (targetTop - initTop) * k + initTop;
 			}
 		}
 
@@ -327,6 +302,9 @@
 			var k = (scrollTop / (docHeight - clientHeight)-beginScrollTopK)/(endScrollTopK-beginScrollTopK);
 			//当前小球跳向的方块元素索引
 			var i = Math.floor(k*imgs.length);
+			if(i==0){
+				return;
+			}
 			//目前小球跳向目标方块的动画播放进度百分比
 			var del = k*imgs.length-i;
 			del = del.toFixed(2);
@@ -341,12 +319,11 @@
 			//下一帧动画的相对X轴位移
 			var x  = width*del;
 			//抛物线运动计算公式：y = a*x*x + b*x + c a为指定常数 c为0 要先算出b才能求出目前x轴位移对应的y轴位移
-			var a = 0.015;
+			var a = 0.02;
 			var b = (height-a*width*width)/width;
 			var y = a*x*x+b*x;
-			role.style.left=imgs[i-1].offsetLeft-50+width*del;
-			role.style.top=imgs[i-1].offsetTop-135+y;
-			console.log("x:"+x+" 垂直位移:"+y)
+			role.style.left=imgs[i-1].offsetLeft-0.035*document.documentElement.clientWidth+width*del;
+			role.style.top=imgs[i-1].offsetTop-0.09*document.documentElement.clientWidth+y;
 		}
 
 		function removeAni(i,aniClass){
