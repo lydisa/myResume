@@ -8,6 +8,14 @@
 			background: #B5D2E8;
 			height: 3000px;
 			overflow-x: hidden;
+			filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red, endcolorstr=blue, gradientType=0);
+			-ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red, endcolorstr=blue, gradientType=0);
+			/*IE8*/
+			background: red;
+			/* 一些不支持背景渐变的浏览器 */
+			background: -moz-linear-gradient(top, #3A4F95, #6087D7, rgba(52, 175, 242, 0.5));
+			background: -webkit-linear-gradient(top, #3A4F95, #6087D7, rgba(52, 175, 242, 0.5));
+			background: -o-linear-gradient(top, #3A4F95, #6087D7, rgba(52, 175, 242, 0.5));
 		}
 		
 		.scene {
@@ -20,12 +28,21 @@
 			position: fixed;
 		}
 		
+		.bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		
+		.bg img {
+			position: absolute
+		}
+		
 		#scene_back {}
 		
 		#scene_center {}
 		
 		#scene_front {}
-		
 		
 		#bridge_cube_2 {
 			width: 11%;
@@ -39,13 +56,11 @@
 			left: 34.0%;
 		}
 		
-		
 		#bridge_cube_6 {
 			width: 11%;
 			top: 51.4%;
 			left: 46.9%;
 		}
-		
 		
 		#bridge_cube_8 {
 			width: 11%;
@@ -73,68 +88,244 @@
 		
 		#role {
 			width: 16%;
-			top: -0.05%;
+			top: -6.05%;
 			left: 87.5%;
 		}
-
-		#cloud_1{top:600px;left:400px;width:120px}
-		#cloud_2{top:456px;left:100px;width:234px}
-		#cloud_3{top:30px;left:555px;width:786px}
-		#cloud_4{top:222px;left:343px;width:200px}
-		#cloud_5{top:400px;left:1187px;width:333px}
-		#cloud_6{top:1023px;left:646px;width:555px}
-
+		
+		#cloud_1 {
+			top: 118%;
+			left: 74%;
+			width: 15%
+		}
+		
+		#cloud_2 {
+			top: 89%;
+			left: 24%;
+			width: 16%
+		}
+		
+		#cloud_3 {
+			top: 3.8%;
+			left: 51.6%;
+			width: 26%
+		}
+		
+		#cloud_4 {
+			top: 74.8%;
+			left: 39.9%;
+			width: 8%
+		}
+		
+		#cloud_5 {
+			top: 50%;
+			left: 82%;
+			width: 12%
+		}
+		
+		#cloud_6 {
+			top: 20%;
+			left: 0.45%;
+			width: 10%
+		}
+		
+		#cloud_7 {
+			top: 25.8%;
+			left: 4.9%;
+			width: 18%
+		}
+		
+		#cloud_8 {
+			top: 77%;
+			left: 76%;
+			width: 17%
+		}
+		
+		#cloud_9 {
+			top: 98%;
+			left: 2.45%;
+			width: 28%
+		}
+		
+		#show_box {
+			border: 1px solid #fff;
+			background: rgba(255, 255, 255, 0.9);
+			position: fixed;
+			width: 45%;
+			margin: 10px;
+			padding: 10px;
+			height: 50%;
+			border-radius: 12px;
+			background-clip: content-box;
+			text-align: center;
+			font-size: 90px;
+		}
+		
+		.none_v {
+			visibility: hidden
+		}
+		
+		.header {
+			position: absolute;
+			top: 0;
+			right: 0
+		}
+		
+		#logo {
+			position: absolute;
+			right: -10px;
+			top: 0;
+			background: #F65050;
+			width: 50px;
+			height: 50px;
+			display: block;
+			line-height: 50px;
+			color: #fff;
+			font-size: 15px;
+			border-radius:12px;
+		}
+		
+		#logo .number {
+			transform: rotate(-45deg);
+			display: block;
+		}
+		
+		#title {
+			position: absolute;
+			right: 70px;
+			top: 18px;
+			line-height: 25px;
+			white-space: nowrap;
+			font-size: 20px;
+			font-weight: bold;
+		}
 		
 		@keyframes myfirst {
-			0%{margin-top: 0}
+			0% {
+				margin-top: 0
+			}
 			25% {
 				margin-top: 5px
 			}
 			75% {
 				margin-top: -5px
 			}
-			100%{margin-top: 0}
+			100% {
+				margin-top: 0
+			}
 		}
 		
 		@keyframes myfirst_rev {
-			0%{margin-top: 0}
+			0% {
+				margin-top: 0
+			}
 			25% {
 				margin-top: -5px
 			}
 			75% {
 				margin-top: 5px
 			}
-			100%{margin-top: 0}
+			100% {
+				margin-top: 0
+			}
 		}
-
+		
 		@keyframes tip {
-			0%{margin-top: 0}
+			0% {
+				margin-top: 0
+			}
 			12.5% {
 				margin-top: -5px
 			}
 			37.5% {
 				margin-top: 5px
 			}
-			50%{margin-top: 0}
-			62.5%{margin-top:-5px}
-			87.5%{margin-top:5px}
-			100%{margin-top:0}
-		}
-
-		@keyframes light{
-			from{
-				-webkit-transform:scale(1.1);
-				-moz-transform:scale(1.1);
-				-o-transform:scale(1.1)
-				};
-				to{
-				-webkit-transform:scale(0.5);
-				-moz-transform:scale(0.5);
-				-o-transform:scale(0.5)
-				}
+			50% {
+				margin-top: 0
+			}
+			62.5% {
+				margin-top: -5px
+			}
+			87.5% {
+				margin-top: 5px
+			}
+			100% {
+				margin-top: 0
+			}
 		}
 		
-		.ani_light{
+		@keyframes light {
+			from {
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-o-transform: scale(1.1)
+			}
+			;
+			to {
+				-webkit-transform: scale(0.5);
+				-moz-transform: scale(0.5);
+				-o-transform: scale(0.5)
+			}
+		}
+		
+		@keyframes showUp {
+			0% {
+				-webkit-transform: scale(0);
+				-moz-transform: scale(0);
+				-o-transform: scale(0)
+			}
+			50% {
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-o-transform: scale(1.1);
+			}
+			100% {
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-o-transform: scale(1);
+			}
+		}
+		
+		@keyframes hideUp {
+			0% {
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				-o-transform: scale(1)
+			}
+			50% {
+				-webkit-transform: scaleY(0.1);
+				-moz-transform: scaleY(0.1);
+				-o-transform: scaleY(0.1);
+			}
+			100% {
+				-webkit-transform: scale(0);
+				-moz-transform: scale(0);
+				-o-transform: scale(0);
+			}
+		}
+		
+		@keyframes titleRotate {
+			from {
+				-webkit-transform: rotate(0);
+				-moz-transform: rotate(0);
+				-o-transform: rotate(0);
+			}
+			to {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				;
+				-o-transform: rotate(45deg);
+				;
+			}
+		}
+		@keyframes titleSlide {
+			from {right:0;
+			}
+			to {
+				right:70px
+			}
+		}
+		
+		.ani_light {
 			animation: light 1s infinite alternate;
 			-moz-animation: light 1s infinite alternate;
 			/* Firefox */
@@ -142,14 +333,16 @@
 			/* Safari 和 Chrome */
 			-o-animation: light 1s infinite alternate;
 		}
-		.ani_tip{
-			animation: tip 2s  alternate;
-			-moz-animation: tip 2s  alternate;
+		
+		.ani_tip {
+			animation: tip 2s alternate;
+			-moz-animation: tip 2s alternate;
 			/* Firefox */
-			-webkit-animation: tip 2s  alternate;
+			-webkit-animation: tip 2s alternate;
 			/* Safari 和 Chrome */
-			-o-animation: tip 2s  alternate;
+			-o-animation: tip 2s alternate;
 		}
+		
 		.ani_float {
 			animation: myfirst 5s infinite alternate;
 			-moz-animation: myfirst 5s infinite alternate;
@@ -167,6 +360,43 @@
 			/* Safari 和 Chrome */
 			-o-animation: myfirst_rev 5s infinite alternate;
 		}
+		
+		.ani_show_up {
+			animation: showUp 0.6s alternate both;
+			-moz-animation: showUp 0.6s alternate both;
+			/* Firefox */
+			-webkit-animation: showUp 0.6s alternate both;
+			/* Safari 和 Chrome */
+			-o-animation: showUp 0.6s alternate both;
+		}
+		
+	
+		.ani_logo {
+			animation:  titleRotate 0.3s  0.2s alternate both;
+			-moz-animation: titleRotate 0.3s 0.2s  alternate both;
+			/* Firefox */
+			-webkit-animation: titleRotate 0.3s 0.2s  alternate both;
+			/* Safari 和 Chrome */
+			-o-animation: titleRotate 0.3s 0.2s  alternate both;
+		}
+		.ani_title {
+			animation:  titleSlide 0.3s  0.2s alternate both;
+			-moz-animation: titleSlide 0.3s 0.2s  alternate both;
+			/* Firefox */
+			-webkit-animation: titleSlide 0.3s 0.2s  alternate both;
+			/* Safari 和 Chrome */
+			-o-animation: titleSlide 0.3s 0.2s  alternate both;
+		}
+
+			.ani_hide_up {
+			animation: hideUp 0.6s alternate both;
+			-moz-animation: hideUp 0.6s alternate both;
+			/* Firefox */
+			-webkit-animation: hideUp 0.6s alternate both;
+			/* Safari 和 Chrome */
+			-o-animation: hideUp 0.6s alternate both;
+		}
+
 	</style>
 
 	<style id="style-1-cropbar-clipper">
@@ -189,12 +419,12 @@
 </head>
 
 <body>
-		<div class="bg1">
-		<img id="cloud_1" src="cloud.png">
-		<img id="cloud_2" src="cloud.png">
-		<img id="cloud_3" src="cloud.png">
+	<div class="bg" id='bg0'>
+		<img id="cloud_7" src="cloud_f.png">
+		<img id="cloud_8" src="cloud_f.png">
+		<img id="cloud_9" src="cloud_f.png">
 	</div>
-	<div class="bg2">
+	<div class="bg" id='bg1'>
 		<img id="cloud_4" src="cloud.png">
 		<img id="cloud_5" src="cloud.png">
 		<img id="cloud_6" src="cloud.png">
@@ -211,13 +441,31 @@
 		<!--<img src="cube_yellow.png" id="bridge_cube_3">-->
 		<img src="cube.png" id="bridge_cube_2">
 		<!--<img src="cube.png" id="bridge_cube_1">-->
-		<img  src="cube_yellow.png" id="land_cube_2">
+		<img src="cube_yellow.png" id="land_cube_2">
 		<img class="ani_light" src="light.png" id="role">
+	</div>
+	<div class="bg" id="bg2">
+		<img id="cloud_1" src="cloud.png">
+		<img id="cloud_2" src="cloud.png">
+		<img id="cloud_3" src="cloud.png">
+	</div>
+	<div id="show_box" class="none_v">
+		<div class="header">
+			<span id='title'>关于我</span>
+			<div id="logo">
+				<span class='number'>1</span>
+			</div>
+		</div>
+		<div class="content"></div>
 	</div>
 
 	<script>
 		var imgs = document.querySelectorAll(".bridge img");
 		var role = document.getElementById("role");
+		var showBox = document.getElementById("show_box");
+		var logo = document.getElementById("logo");
+		var title = document.getElementById("title");
+		var boxOldShow = false;
 		var imgMoves = [];
 		var docHeight = document.documentElement.clientHeight;
 		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -241,12 +489,9 @@
 				//imgs[i].style.top = initTop + 'px';
 
 			}
-			var sceneBack = document.getElementById('scene_back'),
-				sceneCenter = document.getElementById('scene_center'),
-				sceneFront = document.getElementById('scene_front');
-			var old_top1 = 0,
-				old_top2 = 200,
-				old_top3 = 700;
+			var bg1 = document.getElementById('bg1'),
+				bg2 = document.getElementById('bg2')
+			bg0 = document.getElementById('bg0')
 
 			addEvent(window, 'scroll', onScroll);
 			onScroll();
@@ -263,15 +508,9 @@
 				clientHeight = document.body.clientHeight;　　
 			}
 
-			if (scrollTop < docHeight * 0.360) {
-				//rollDown(0,0.360);
-				walk(0,1);
-			} else if (scrollTop < docHeight * 0.7) {
-				walk(0,1);
-			} else {
-				walk(0,1);
-			}
-
+			rollDown(0, 0.350);
+			walk(0.2, 1);
+			background(0, 1);
 
 		}
 
@@ -288,48 +527,108 @@
 			}
 		}
 
-		function rollDown(beginScrollTopK,endScrollTopK) {
+		function rollDown(beginScrollTopK, endScrollTopK) {
 			for (var i = 0; i < imgs.length; i++) {
 				var targetTop = imgMoves[i].targetTop;
 				var initTop = imgMoves[i].initTop;
 				//k为当前滚动条的位置占指定的开始到结束区间的百分比
-				var k = (scrollTop / (docHeight - clientHeight)-beginScrollTopK)/(endScrollTopK-beginScrollTopK);
+				var k = getProcession(scrollTop, beginScrollTopK, endScrollTopK);
 				imgs[i].style.top = (targetTop - initTop) * k + initTop;
 			}
 		}
 
-		function walk(beginScrollTopK,endScrollTopK) {
-			var k = (scrollTop / (docHeight - clientHeight)-beginScrollTopK)/(endScrollTopK-beginScrollTopK);
+		function walk(beginScrollTopK, endScrollTopK) {
+			var k = getProcession(scrollTop, beginScrollTopK, endScrollTopK);
 			//当前小球跳向的方块元素索引
-			var i = Math.floor(k*imgs.length);
-			if(i==0){
+			var i = Math.floor(k * imgs.length);
+			if (i == 0) {
+				showingBox(false, 0);
 				return;
 			}
+
 			//目前小球跳向目标方块的动画播放进度百分比
-			var del = k*imgs.length-i;
+			var del = k * imgs.length - i;
 			del = del.toFixed(2);
-			if(del>0.8&&del<0.9&&!imgMoves[i].playing){
+			if (del > 0.8 && del < 0.9 && !imgMoves[i].playing) {
 				imgs[i].classList.add("ani_tip");
 				imgMoves[i].playing = true;
-				setTimeout(function(){removeAni(i,"ani_tip");},2000)
+				setTimeout(function () {
+					removeAni(i, "ani_tip");
+				}, 2000)
+			}
+			console.log(del);
+			// if (0.5<del || del > 0.8) {
+			// 	showingBox(false, i);
+			// } else {
+			// 	showingBox(true, i)
+			// }
+			if (del > 0.75) {
+				showingBox(true, i);
+			} else if (del < 0.25) {
+				showingBox(true, i - 1)
+			} else {
+				showingBox(false)
 			}
 			//小球上一个目标方块距离当前目标方块的相对坐标计算
-			var width = imgs[i].offsetLeft-imgs[i-1].offsetLeft;
-			var height = imgs[i].offsetTop-imgs[i-1].offsetTop;
+			var width = imgs[i].offsetLeft - imgs[i - 1].offsetLeft;
+			var height = imgs[i].offsetTop - imgs[i - 1].offsetTop;
 			//下一帧动画的相对X轴位移
-			var x  = width*del;
+			var x = width * del;
 			//抛物线运动计算公式：y = a*x*x + b*x + c a为指定常数 c为0 要先算出b才能求出目前x轴位移对应的y轴位移
 			var a = 0.02;
-			var b = (height-a*width*width)/width;
-			var y = a*x*x+b*x;
-			role.style.left=imgs[i-1].offsetLeft-0.035*document.documentElement.clientWidth+width*del;
-			role.style.top=imgs[i-1].offsetTop-0.09*document.documentElement.clientWidth+y;
+			var b = (height - a * width * width) / width;
+			var y = a * x * x + b * x;
+			var oldTop = role.style.top
+			role.style.left = imgs[i - 1].offsetLeft - 0.035 * document.documentElement.clientWidth + width * del;
+			role.style.top = imgs[i - 1].offsetTop - 0.09 * document.documentElement.clientWidth + y;
 		}
 
-		function removeAni(i,aniClass){
-			console.log(i)
+		function background(beginScrollTopK, endScrollTopK) {
+			bg1.style.marginTop = scrollTop * .7 + 'px';
+			bg2.style.marginTop = scrollTop * .2 + 'px';
+			bg0.style.marginTop = scrollTop * .8 + 'px';
+		}
+
+		function removeAni(i, aniClass) {
 			imgs[i].classList.remove(aniClass);
-			imgMoves[i].playing=false;
+			imgMoves[i].playing = false;
+		}
+
+		function showingBox(show, i) {
+			if (i == 0 || i == 7) {
+				show = false;
+			}
+			if (show !== boxOldShow) {
+				if (show) {
+					//showBox.innerHTML = i;
+					
+					showBox.classList.remove("ani_hide_up");
+					showBox.classList.remove("none_v");
+					logo.classList.add("ani_logo");
+					title.classList.add("ani_title");
+					showBox.classList.add("ani_show_up");
+				} else {
+										logo.classList.remove("ani_logo");
+					title.classList.remove("ani_title");
+					showBox.classList.remove("ani_show_up");
+					showBox.classList.add("ani_hide_up");
+					setTimeout(function () {
+						//showBox.classList.add("none_v");
+					}, 1000)
+				}
+				boxOldShow = show;
+			}
+
+		}
+
+		function getProcession(scrollTop, beginScrollTopK, endScrollTopK) {
+			var k = (scrollTop / (docHeight - clientHeight) - beginScrollTopK) / (endScrollTopK - beginScrollTopK);
+			if (k < 0) {
+				k = 0
+			} else if (k > 1) {
+				k = 1
+			}
+			return k;
 		}
 	</script>
 
