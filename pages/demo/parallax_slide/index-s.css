@@ -1,0 +1,22 @@
+		#show_box {
+		    width: 80%;
+		    height: 400px;
+		}
+		
+		#show_box .title {
+		    top: 30px;
+		    font-size: 40px;
+		}
+		
+		#show_box .logo {
+		    line-height: 60px;
+		    width: 60px;
+		    height: 60px;
+		}
+		
+		#show_box .logo .number {
+		    font-size: 30px;
+		}
+        #show_box .content{
+            font-size:28px
+        }

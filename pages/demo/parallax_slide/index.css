@@ -1,0 +1,249 @@
+	body 
+	{
+		margin:0;
+		background: #B5D2E8;
+		height: 3000px;
+		overflow-x: hidden;
+		filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red, endcolorstr=blue, gradientType=0);
+		-ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red, endcolorstr=blue, gradientType=0);
+		/*IE8*/
+		background: red;
+		/* 一些不支持背景渐变的浏览器 */
+		background: -moz-linear-gradient(top, #3A4F95, #6087D7, rgba(52, 175, 242, 0.5));
+		background: -webkit-linear-gradient(top, #3A4F95, #6087D7, rgba(52, 175, 242, 0.5));
+		background: -o-linear-gradient(top, #3A4F95, #6087D7, rgba(52, 175, 242, 0.5));
+		font-family: 微软雅黑;
+	}
+	
+	.scene {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.bridge img {
+		position: fixed;
+		padding:10px
+	}
+	.bridge .small_cube:hover{
+		background:url('cube_light.png')no-repeat center center/100%
+	}
+
+	.bridge .selected{
+		background:url('cube_light.png')no-repeat center center/100%
+	}
+	
+	.bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.bg img {
+		position: absolute
+	}
+	
+	#loading_bar{position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0.3);
+    color: #fff;}
+	#scene_back {}
+	
+	#scene_center {}
+	
+	#scene_front {}
+	
+	#bridge_cube_2 {
+		width: 11%;
+		top: 74.7%;
+		left: 21.8%;
+	}
+	
+	#bridge_cube_4 {
+		width: 11%;
+		top: 64.6%;
+		left: 34.0%;
+	}
+	
+	#bridge_cube_6 {
+		width: 11%;
+		top: 51.4%;
+		left: 46.9%;
+	}
+	
+	#bridge_cube_8 {
+		width: 11%;
+		top: 38.3%;
+		left: 59.4%;
+	}
+	
+	#bridge_cube_10 {
+		width: 11%;
+		top: 24.2%;
+		left: 70.9%;
+	}
+	
+	#land_cube_1 {
+		width: 29%;
+		top: 0%;
+		left: 76%;
+	}
+	
+	#land_cube_2 {
+		width: 29%;
+		top: 75.4%;
+		left: 0.4%;
+	}
+	
+	#role {
+		width: 16%;
+		top: -6.05%;
+		left: 87.5%;
+	}
+	
+	#cloud_1 {
+		top: 118%;
+		left: 74%;
+		width: 15%
+	}
+	
+	#cloud_2 {
+		top: 89%;
+		left: 24%;
+		width: 16%
+	}
+	
+	#cloud_3 {
+		top: 3.8%;
+		left: 51.6%;
+		width: 26%
+	}
+	
+	#cloud_4 {
+		top: 74.8%;
+		left: 39.9%;
+		width: 8%
+	}
+	
+	#cloud_5 {
+		top: 50%;
+		left: 82%;
+		width: 12%
+	}
+	
+	#cloud_6 {
+		top: 20%;
+		left: 0.45%;
+		width: 10%
+	}
+	
+	#cloud_7 {
+		top: 25.8%;
+		left: 4.9%;
+		width: 18%
+	}
+	
+	#cloud_8 {
+		top: 77%;
+		left: 76%;
+		width: 17%
+	}
+	
+	#cloud_9 {
+		top: 98%;
+		left: 2.45%;
+		width: 28%
+	}
+	
+	#show_box {
+		border: 1px solid #fff;
+		background: rgba(255, 255, 255, 0.9);
+		position: fixed;
+		width: 45%;
+		margin: 10px;
+		padding: 10px;
+		height: 450px;
+		border-radius: 12px;
+		background-clip: content-box;
+		text-align: center;
+		font-size: 90px;
+	}
+	
+	.none_v {
+		visibility: hidden
+	}
+	
+	.header {
+		position: absolute;
+		top: 0;
+		right: 0
+	}
+	
+	#show_box .logo {
+		position: absolute;
+		right: -10px;
+		top: 0;
+		background: #F65050;
+		width: 50px;
+		height: 50px;
+		display: block;
+		line-height: 50px;
+		color: #fff;
+		font-size: 15px;
+		border-radius: 12px;
+	}
+	
+	#show_box .logo .number {
+		transform: rotate(-45deg);
+		display: block;
+	}
+	
+	#show_box .title {
+		position: absolute;
+		right: 70px;
+		top: 18px;
+		line-height: 25px;
+		white-space: nowrap;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	
+	#show_box .content {
+		font-size: 20px;
+		text-align: left;
+		margin-top: 60px;
+		margin-left: 20px;
+		line-height: 40px;
+	}
+	
+	#show_box .content strong {
+		font-size: 32px;
+	}
+
+#show_box .bt_btn{
+	border: 1px solid #BFBFBF;
+    color: #4F4F4F;
+    padding: 5px 20px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 29px;
+    left: 50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+}
+.block{height: 100%;
+    width: 100%;
+    position: fixed;}
+.block span{background: #000;
+    height: 60px;
+    width: 100%;
+    display: block;
+    position: absolute;}
+	.hide{
+		display: none;
+	}
